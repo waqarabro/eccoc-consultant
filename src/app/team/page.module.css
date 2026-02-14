@@ -1,0 +1,234 @@
+.main {
+    background: white;
+    min-height: 100vh;
+}
+
+.hero {
+    padding: 12rem 2rem 8rem;
+    background: white;
+    position: relative;
+    text-align: center;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 10;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 6rem;
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+    color: var(--primary-blue);
+    margin-bottom: 2rem;
+}
+
+.gradientText {
+    background: linear-gradient(135deg, #F59E0B, #D97706);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    font-size: 1.75rem;
+    color: #64748B;
+    font-weight: 300;
+}
+
+.heroBlob {
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(245, 158, 11, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.teamSection {
+    background: #F8FAFC;
+    padding: 4rem 0 10rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+}
+
+.card.active {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.progressBar {
+    height: 4px;
+    background: var(--primary-red);
+    width: 0%;
+}
+
+.imageContainer {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/5;
+    overflow: hidden;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s;
+}
+
+.card:hover .image {
+    transform: scale(1.05);
+}
+
+.card.active .image {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.card.active .overlay {
+    opacity: 1;
+}
+
+.socials {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.socialIcon {
+    color: white;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.socialIcon:hover {
+    transform: scale(1.2);
+    color: #F59E0B;
+}
+
+.info {
+    padding: 2rem;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.info h2 {
+    font-size: 1.75rem;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.role {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-red);
+    margin-bottom: 1.5rem;
+}
+
+.bioPreview {
+    font-size: 1rem;
+    color: #64748B;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.readMore {
+    margin-top: auto;
+    background: transparent;
+    border: 1px solid #E2E8F0;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    color: var(--primary-blue);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    align-self: center;
+}
+
+.readMore:hover {
+    background: var(--primary-blue);
+    color: white;
+    border-color: var(--primary-blue);
+}
+
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 8rem 1.5rem 4rem;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .info {
+        padding: 1.5rem;
+    }
+}

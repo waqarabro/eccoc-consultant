@@ -1,0 +1,161 @@
+.card {
+    background: white;
+    border-radius: 24px;
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+/* Hover OR Active (Cycling) State */
+.card:hover,
+.card.active {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: var(--shadow-2xl);
+    /* Even deeper shadow */
+    border-color: transparent;
+}
+
+/* Gradient Border */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    padding: 2px;
+    background: linear-gradient(135deg, #3B82F6, #8B5CF6, #E11D48);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.card:hover::before,
+.card.active::before {
+    opacity: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+    background: linear-gradient(to right, var(--primary-blue), #1e293b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    color: var(--primary-blue);
+    /* Fallback */
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    transition: all 0.3s;
+}
+
+.card:hover .title,
+.card.active .title {
+    background: linear-gradient(to right, #2563EB, #DB2777);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.description {
+    font-size: 1.1rem;
+    color: #475569;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.points {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2.5rem 0;
+}
+
+.points li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #334155;
+    font-weight: 500;
+}
+
+.icon {
+    color: white;
+    min-width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, var(--primary-red), #F43F5E);
+    padding: 5px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(225, 29, 72, 0.25);
+    transition: transform 0.3s;
+}
+
+.card:hover .icon,
+.card.active .icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.footer {
+    margin-top: auto;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.5rem;
+}
+
+.more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--primary-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.more:hover,
+.card.active .more {
+    color: var(--primary-red);
+    gap: 1.1rem;
+}
+
+/* Background Blob */
+.blob {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    z-index: 0;
+    opacity: 0.6;
+    transition: all 0.6s ease;
+    filter: blur(40px);
+}
+
+.card:hover .blob,
+.card.active .blob {
+    transform: scale(1.5) translate(-20px, 20px);
+    background: radial-gradient(circle, rgba(244, 63, 94, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+}

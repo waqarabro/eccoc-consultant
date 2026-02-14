@@ -1,0 +1,209 @@
+.whyUs {
+    background-color: var(--secondary-bg);
+    /* Slate 50 contrast */
+    padding: 10rem 0;
+    position: relative;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    /* Asymmetric grid */
+    gap: 8rem;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.headline {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    color: var(--primary-blue);
+    letter-spacing: -0.02em;
+}
+
+.highlight {
+    color: var(--primary-red);
+}
+
+.subheadline {
+    font-size: 1.5rem;
+    color: #475569;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.challenges {
+    list-style: none;
+    padding: 0;
+}
+
+.challenges li {
+    position: relative;
+    padding-left: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    color: var(--foreground);
+    font-weight: 500;
+}
+
+.challenges li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--primary-red);
+    border-radius: 4px;
+    /* Soft square > Circle for modern look */
+    box-shadow: 0 4px 10px rgba(225, 29, 72, 0.4);
+}
+
+/* Premium Perspective Card */
+.perspectiveCard {
+    position: relative;
+    background: white;
+    border-radius: 32px;
+    padding: 3px;
+    /* Simulate border width */
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.5), rgba(225, 29, 72, 0.5));
+    /* Gradient Border */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    transition: transform 0.4s ease;
+}
+
+.perspectiveCard:hover {
+    transform: translateY(-10px);
+}
+
+.cardGlow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background: linear-gradient(135deg, #3B82F6, #E11D48);
+    filter: blur(80px);
+    opacity: 0.15;
+    z-index: 0;
+    pointer-events: none;
+    animation: pulseGlow 4s infinite alternate;
+}
+
+.cardContent {
+    background: white;
+    border-radius: 30px;
+    padding: 3.5rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.cardHeader h3 {
+    font-size: 2rem;
+    color: var(--primary-blue);
+    margin: 0;
+    font-weight: 800;
+}
+
+.pulseDot {
+    width: 12px;
+    height: 12px;
+    background: var(--primary-red);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.7);
+    animation: pulseRed 2s infinite;
+}
+
+.cardContent p {
+    color: #475569;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    font-size: 1.15rem;
+}
+
+.cta {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 1.5rem;
+    color: var(--primary-blue);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.cta::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, var(--primary-blue), var(--primary-red));
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.3s;
+}
+
+.cta:hover {
+    letter-spacing: 0.15em;
+    color: var(--primary-red);
+}
+
+@keyframes pulseRed {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(225, 29, 72, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(225, 29, 72, 0);
+    }
+}
+
+@keyframes pulseGlow {
+    from {
+        opacity: 0.15;
+    }
+
+    to {
+        opacity: 0.3;
+    }
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .cardContent {
+        padding: 2.5rem;
+    }
+}

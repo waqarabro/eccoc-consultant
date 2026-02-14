@@ -1,0 +1,133 @@
+.section {
+    background-color: white;
+    padding: 10rem 0;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 8rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-blue);
+}
+
+.header p {
+    font-size: 1.5rem;
+    color: #64748B;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    position: relative;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Connecting line */
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 45px;
+    left: 2rem;
+    right: 2rem;
+    height: 2px;
+    background: #E2E8F0;
+    z-index: 0;
+    display: none;
+    /* Hidden on grid, maybe visible on larger screens if desired, but cleaner without */
+}
+
+.step {
+    position: relative;
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1;
+    overflow: hidden;
+    border: 1px solid transparent;
+}
+
+.step:hover,
+.step.active {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(225, 29, 72, 0.1);
+}
+
+.number {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    color: var(--primary-blue);
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s;
+}
+
+.step:hover .number,
+.step.active .number {
+    background-color: var(--primary-blue);
+    color: white;
+    border-color: var(--primary-blue);
+    box-shadow: var(--shadow-md);
+    transform: scale(1.1);
+}
+
+.content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-blue);
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.step.active h3 {
+    color: var(--primary-red);
+}
+
+.content p {
+    color: #64748B;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.progressBar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background: var(--primary-red);
+}
+
+@media (max-width: 900px) {
+    .timeline {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .timeline {
+        grid-template-columns: 1fr;
+    }
+}
