@@ -8,10 +8,9 @@ import styles from './Navbar.module.css';
 
 const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
-    { name: 'Our Team', path: '/team' },
-    { name: 'Why Us', path: '/why-us' },
+    { name: 'About', path: '/about' },
+    { name: 'Why ecco', path: '/why-eccoc' },
     { name: 'Insights', path: '/insights' },
     { name: 'Contact', path: '/contact' },
 ];

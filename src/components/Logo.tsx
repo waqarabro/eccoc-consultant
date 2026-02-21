@@ -7,8 +7,18 @@ interface LogoProps {
 const Logo = ({ light = false }: LogoProps) => {
     return (
         <div className={`${styles.logo} ${light ? styles.light : ''}`}>
-            <span className={styles.text}>Management</span>
-            <span className={styles.consultants}>Consultants</span>
+            <img
+                src="https://staging.swashi.io/wp-content/uploads/2026/01/Ecco_Logo_3D_WHITE_72dpi_Transparent.png"
+                alt="Ecco Consultants"
+                className={styles.logoImage}
+                style={{
+                    height: 'auto',
+                    width: 'auto',
+                    maxHeight: '50px',
+                    maxWidth: '180px', /* Constraint added */
+                    objectFit: 'contain'
+                }}
+            />
         </div>
     );
 };

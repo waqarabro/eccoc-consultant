@@ -7,7 +7,7 @@ import styles from './FinalCTA.module.css';
 
 const FinalCTA = () => {
     return (
-        <Section id="contact" className={styles.section}>
+        <Section id="conversation" className={styles.section}>
             <div className={styles.content}>
                 <motion.h2
                     initial={{ opacity: 0, y: 30 }}
@@ -25,21 +25,24 @@ const FinalCTA = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                    <div className={styles.list}>
-                        <span>Looking to improve performance</span>
-                        <span className={styles.separator}>|</span>
-                        <span>Feeling stuck despite working hard</span>
-                        <span className={styles.separator}>|</span>
-                        <span>Thinking about long-term value</span>
+                    <div className={styles.intro}>
+                        <p className={styles.introTitle}>Whether you’re:</p>
+                        <ul className={styles.checkList}>
+                            <li>Looking to improve performance</li>
+                            <li>Feeling stuck despite working hard</li>
+                            <li>Thinking about the long-term value of your business</li>
+                            <li>Or simply wanting a clearer view of where you stand</li>
+                        </ul>
                     </div>
 
-                    <p className={styles.promise}>
-                        A conversation with Management Consultants will give you clarity, perspective, and direction — even before we work together.
-                    </p>
-
-                    <p className={styles.noObligation}>
-                        No obligation. No pressure. Just a practical, commercial discussion.
-                    </p>
+                    <div className={styles.promiseBlock}>
+                        <p className={styles.promise}>
+                            A conversation with ecco Consultants will give you clarity, perspective, and direction — even before we work together.
+                        </p>
+                        <p className={styles.noObligation}>
+                            There’s no obligation, and no pressure. Just a practical, commercial discussion about your business and what matters most.
+                        </p>
+                    </div>
 
                     <p className={styles.signature}>
                         Real-world entrepreneurs on your side — not career consultants.

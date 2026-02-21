@@ -17,19 +17,27 @@ const WhyUs = () => {
                     transition={{ duration: 0.6 }}
                 >
                     <h2 className={styles.headline}>
-                        Entrepreneurs First.<br />
-                        <span className={styles.highlight}>Consultants Second.</span>
+                        Why Business Owners Choose<br />
+                        <span className={styles.highlight}>ecco Consultants</span>
                     </h2>
-                    <p className={styles.subheadline}>
-                        There’s an important difference between people who study businesses and people who have run them.
-                    </p>
+                    <div className={styles.subheadline}>
+                        <p>Most business owners don’t come to us looking for generic advice. They come because something isn’t quite working the way it should — despite the effort they’re putting in.</p>
+                        <p style={{ marginTop: '1rem', fontWeight: 600 }}>Often, that looks like:</p>
+                    </div>
 
                     <ul className={styles.challenges}>
-                        <li>We understand the emotional weight of decision-making</li>
-                        <li>We recognise when theory collides with reality</li>
-                        <li>We focus on what’s practical, not just what’s ideal</li>
-                        <li>We appreciate that timing, context, and judgement matter</li>
+                        <li>Revenue is growing, but the <strong>profit is not keeping pace</strong></li>
+                        <li>A business that’s <strong>too dependent on the owner</strong></li>
+                        <li>Operational complexity that makes change harder than it needs to be</li>
+                        <li>Teams that are capable, but <strong>not consistently aligned</strong></li>
+                        <li>Uncertainty about whether the business is actually <strong>building value</strong></li>
                     </ul>
+
+                    <div style={{ marginTop: '2rem' }}>
+                        <Link href="/contact" className={styles.cta}>
+                            TAKE FREE SURVEY
+                        </Link>
+                    </div>
                 </motion.div>
 
                 <motion.div
@@ -48,15 +56,16 @@ const WhyUs = () => {
                             </div>
 
                             <p>
-                                Most business owners don’t struggle because they lack ideas. They struggle because the advice they receive doesn’t always hold up in the real world.
+                                At ecco Consultants, we help bring clarity to those challenges.
                             </p>
                             <p>
-                                At Management Consultants, every advisor has built, operated, and sold businesses of their own. That experience shapes how we think, how we advise, and how we work with you.
+                                Our approach is grounded in experience — not theory. We take the time to understand how your business really operates, identify what’s holding it back, and focus on the few changes that will make the biggest difference.
+                            </p>
+                            <p style={{ marginTop: '1rem', fontStyle: 'italic', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '1rem' }}>
+                                This isn’t about quick fixes or off-the-shelf solutions. It’s about building a better business, deliberately and sustainably.
                             </p>
 
-                            <Link href="/about" className={styles.cta}>
-                                MORE ABOUT US
-                            </Link>
+                            {/* Placeholder for "about 01 free img" if needed, but text focuses on content first */}
                         </div>
                     </div>
                 </motion.div>

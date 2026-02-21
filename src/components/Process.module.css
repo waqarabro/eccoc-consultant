@@ -1,114 +1,79 @@
 .section {
-    background-color: white;
-    padding: 10rem 0;
+    background-color: var(--white);
+    padding-bottom: 0;
+    /* Flows into next section */
 }
 
 .header {
     text-align: center;
-    margin-bottom: 8rem;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 800px;
+    margin: 0 auto 5rem;
 }
 
 .header h2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin-bottom: 1.5rem;
-    color: var(--primary-blue);
-}
-
-.header p {
-    font-size: 1.5rem;
-    color: #64748B;
-    font-weight: 300;
-    line-height: 1.6;
 }
 
 .timeline {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 4rem;
-    position: relative;
-    max-width: var(--max-width);
+    gap: 2rem;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
-}
-
-/* Connecting line */
-.timeline::before {
-    content: "";
-    position: absolute;
-    top: 45px;
-    left: 2rem;
-    right: 2rem;
-    height: 2px;
-    background: #E2E8F0;
-    z-index: 0;
-    display: none;
-    /* Hidden on grid, maybe visible on larger screens if desired, but cleaner without */
+    padding: 0 2rem 5rem;
 }
 
 .step {
-    position: relative;
-    background: white;
+    background: var(--secondary-bg);
     padding: 2rem;
-    border-radius: 20px;
-    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    z-index: 1;
+    border-radius: 1rem;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
     overflow: hidden;
-    border: 1px solid transparent;
+    /* For progress bar */
 }
 
 .step:hover,
-.step.active {
-    transform: translateY(-10px);
+.active {
+    background: var(--white);
     box-shadow: var(--shadow-lg);
-    border-color: rgba(225, 29, 72, 0.1);
+    transform: translateY(-5px);
 }
 
 .number {
-    width: 60px;
-    height: 60px;
-    background-color: white;
-    color: var(--primary-blue);
-    border: 2px solid var(--border-color);
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    font-weight: 800;
-    margin-bottom: 2rem;
-    box-shadow: var(--shadow-sm);
-    transition: all 0.3s;
+    font-size: 4rem;
+    font-weight: 900;
+    color: rgba(15, 23, 42, 0.05);
+    /* Faint background number */
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    line-height: 1;
 }
 
-.step:hover .number,
-.step.active .number {
-    background-color: var(--primary-blue);
-    color: white;
-    border-color: var(--primary-blue);
-    box-shadow: var(--shadow-md);
-    transform: scale(1.1);
+.active .number {
+    color: rgba(225, 29, 72, 0.1);
+    /* Red tint when active */
+}
+
+.content {
+    position: relative;
+    z-index: 1;
 }
 
 .content h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
     color: var(--primary-blue);
     font-weight: 700;
-    transition: color 0.3s;
-}
-
-.step.active h3 {
-    color: var(--primary-red);
 }
 
 .content p {
+    font-size: 1rem;
     color: #64748B;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin: 0;
+    line-height: 1.5;
 }
 
 .progressBar {
@@ -120,13 +85,6 @@
 }
 
 @media (max-width: 900px) {
-    .timeline {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 3rem;
-    }
-}
-
-@media (max-width: 600px) {
     .timeline {
         grid-template-columns: 1fr;
     }

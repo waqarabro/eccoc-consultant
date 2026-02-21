@@ -1,33 +1,17 @@
 .logo {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     gap: 0.5rem;
-    font-family: inherit;
-    user-select: none;
-}
-
-.text {
-    font-weight: 800;
-    font-size: 1.4rem;
-    /* Adjusted for length */
-    letter-spacing: -0.05em;
-    color: var(--primary-blue);
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--white);
+    letter-spacing: -0.02em;
     line-height: 1;
 }
 
-.consultants {
-    font-weight: 400;
-    font-size: 1.4rem;
-    /* Match height */
-    color: #64748B;
-    /* Slate 500 */
-    letter-spacing: -0.05em;
-}
-
-.light .text {
-    color: white;
-}
-
-.light .consultants {
-    color: rgba(255, 255, 255, 0.8);
+.logoImage {
+    height: 80px;
+    /* Increased from 40px as requested */
+    width: auto;
+    object-fit: contain;
 }

@@ -39,7 +39,7 @@ const Footer = () => {
                             <address className={styles.address}>
                                 <p>Suite 4, 756 Blackburn Rd<br />Clayton, Victoria 3168</p>
                                 <p><a href="tel:0385169999">03 8516 9999</a></p>
-                                <p><a href="mailto:info@managementconsultants.com.au">info@managementconsultants.com.au</a></p>
+                                <p><a href="mailto:info@eccoc.com.au">info@eccoc.com.au</a></p>
                             </address>
                         </div>
                     </div>

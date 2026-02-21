@@ -8,57 +8,57 @@ import styles from './CoreCompetencies.module.css';
 
 const competencies = [
     {
-        title: 'Clarity in Strategy & Focus',
-        description: 'As businesses grow, complexity increases. Decisions that once felt obvious become harder.',
-        points: [
-            'Where your business should focus',
-            'What’s genuinely driving results',
-            'Aligning decisions with commercial goals'
-        ]
-    },
-    {
         title: 'Efficient, Scalable Operations',
-        description: 'Many businesses reach a point where growth creates friction instead of momentum.',
+        description: 'Improving how your business runs day to day — reducing friction, strengthening systems, and creating consistency as the business grows.',
         points: [
-            'Identifying operational bottlenecks',
-            'Strengthening systems & accountability',
-            'Reducing reliance on the owner'
+            'Reducing friction',
+            'Strengthening systems',
+            'Creating consistency'
         ]
     },
     {
         title: 'Aligned, High-Performance Teams',
-        description: 'Capable people don’t always equal strong performance without clear alignment.',
+        description: 'Ensuring roles, responsibilities, and expectations are clear, so your people are aligned, accountable, and working toward the same outcomes.',
         points: [
-            'Clarifying roles & responsibilities',
-            'Strengthening leadership effectiveness',
-            'Improving accountability'
+            'Clarifying roles',
+            'Aligning expectations',
+            'Driving accountability'
         ]
     },
     {
         title: 'Stronger Profit & Cash Flow',
-        description: 'Revenue alone doesn’t create a healthy business. Profitability determines resilience.',
+        description: 'Identifying profit leakage, pricing issues, and cost inefficiencies — and addressing them in practical, commercially sound ways.',
         points: [
             'Identifying profit leakage',
-            'Reviewing pricing & cost structures',
-            'Improving financial visibility'
+            'Addressing pricing issues',
+            'Commercially sound solutions'
         ]
     },
     {
-        title: 'Business Built for Value',
-        description: 'A valuable business gives you choices — whether stepping back or exiting.',
+        title: 'Business Built for Value & Options',
+        description: 'Structuring the business so it’s less dependent on you, more resilient, and genuinely attractive — whether you plan to sell or not.',
         points: [
-            'Reducing dependency on the owner',
-            'Strengthening value drivers',
-            'Improving resilience & risk management'
+            'Reducing dependency',
+            'Increasing resilience',
+            'Creating options'
         ]
     },
     {
-        title: 'Predictable Growth',
-        description: 'Growth is most effective when it’s intentional, controlled, and aligned with capacity.',
+        title: 'Predictable, Sustainable Growth',
+        description: 'Supporting growth that’s intentional and manageable, rather than reactive — so progress doesn’t come at the expense of control.',
         points: [
-            'Ensuring foundations are strong',
-            'Aligning strategy & resources',
-            'Avoiding growth that creates instability'
+            'Intentional growth',
+            'Manageable scaling',
+            'Maintaining control'
+        ]
+    },
+    {
+        title: 'Sales & Marketing',
+        description: 'Building dynamic sales teams and creative marketing solutions to ensure your sales funnel remains full and growth is maintained.',
+        points: [
+            'Dynamic sales teams',
+            'Creative marketing',
+            'Full sales funnel'
         ]
     }
 ];
@@ -90,16 +90,8 @@ const CoreCompetencies = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
                 >
-                    What We Help You Achieve
+                    Core Competencies
                 </motion.h2>
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                >
-                    Our work focuses on what matters most to business owners.
-                </motion.p>
             </div>
 
             <motion.div

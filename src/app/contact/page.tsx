@@ -50,7 +50,7 @@ export default function Contact() {
                                 <div className={styles.iconBox}><Mail size={24} /></div>
                                 <div>
                                     <h3>Email Us</h3>
-                                    <a href="mailto:info@managementconsultants.com.au">info@managementconsultants.com.au</a>
+                                    <a href="mailto:info@eccoc.com.au">info@eccoc.com.au</a>
                                 </div>
                             </div>
 

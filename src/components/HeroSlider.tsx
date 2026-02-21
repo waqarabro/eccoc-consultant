@@ -10,23 +10,23 @@ const slides = [
     {
         id: 1,
         image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop', // Meeting/Strategy
-        title: "Practical Business Advice.",
-        subtitle: "Grounded in Real Experience.",
-        description: "Every advisor at Management Consultants has built, operated, and sold businesses. We don't just talk theory."
+        title: "Build a Better Business Today",
+        subtitle: "Make It Worth Something Tomorrow.",
+        description: "Where real-world experience meets practical business advice."
     },
     {
         id: 2,
         image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop', // Architecture/Scale
-        title: "Structure for Growth.",
-        subtitle: "Built to Last.",
-        description: "We help you implement the systems and teams needed to scale efficiently without chaos."
+        title: "Real-World Experience",
+        subtitle: "Not Just Theory.",
+        description: "At ecco Consultants, every advisor has built, operated, and sold businesses of their own. That experience shapes how we work — because we’ve faced the same challenges you’re dealing with now."
     },
     {
         id: 3,
         image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop', // Handshake/Trust
-        title: "Entrepreneurs First.",
-        subtitle: "Consultants Second.",
-        description: "We understand the emotional weight of decision making because we've been there ourselves."
+        title: "Long-Term Value",
+        subtitle: "Simpler Operations.",
+        description: "We help you improve profitability, strengthen operations, and make your business easier to run — while building genuine long-term value. Advice from people who’ve done it before."
     }
 ];
 

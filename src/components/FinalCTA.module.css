@@ -1,107 +1,182 @@
 .section {
-    background-color: var(--secondary-bg);
-    /* Light grey instead of dark blue */
-    color: var(--foreground);
-    text-align: center;
-    padding: 10rem 0;
+    background-color: var(--white);
+    padding: 8rem 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
     position: relative;
     overflow: hidden;
-    border-top: 1px solid var(--border-color);
+}
+
+/* Decorative background element */
+.section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(30, 64, 175, 0.03) 0%, transparent 70%);
+    pointer-events: none;
 }
 
 .content {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
-    position: relative;
-    z-index: 2;
     padding: 0 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .content h2 {
     font-size: 4rem;
     color: var(--primary-blue);
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     letter-spacing: -0.03em;
     line-height: 1;
+    font-weight: 800;
 }
 
 .textWrapper {
-    margin-bottom: 5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
 }
 
-.list {
-    margin-bottom: 3rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    align-items: center;
-    color: #64748B;
+/* Layout for the checklists - side by side if possible, or centered grid */
+.intro {
+    background: #f8fafc;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 800px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.introTitle {
     font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--primary-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid var(--primary-red);
+    /* Updated to use visible color */
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.checkList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.checkList li {
+    position: relative;
+    padding-left: 2rem;
+    color: var(--text-dark);
     font-weight: 500;
 }
 
-.separator {
-    color: #CBD5E1;
+.checkList li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-red);
+    /* Updated */
+    font-weight: 900;
+    font-size: 1.1rem;
+}
+
+/* Promise block styles */
+.promiseBlock {
+    max-width: 700px;
+    margin-top: 1rem;
 }
 
 .promise {
-    font-size: 1.75rem;
-    color: var(--primary-blue);
-    font-weight: 600;
-    margin-bottom: 2rem;
+    font-size: 1.5rem;
     line-height: 1.4;
-    letter-spacing: -0.01em;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+    font-weight: 600;
 }
 
 .noObligation {
-    font-size: 1.2rem;
-    color: #64748B;
-    margin-bottom: 1.5rem;
-}
-
-.signature {
     font-size: 1.1rem;
+    color: var(--text-light);
     font-style: italic;
-    color: #94A3B8;
 }
 
+/* Signature / Tagline */
+.signature {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-top: 2rem;
+    position: relative;
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: rgba(15, 23, 42, 0.03);
+    border-radius: 50px;
+}
+
+/* Actions area */
 .actions {
-    display: flex;
-    justify-content: center;
+    margin-top: 3rem;
+    position: relative;
+    z-index: 10;
 }
 
 .primaryButton {
-    background-color: var(--primary-blue);
-    color: white;
-    padding: 1.5rem 4rem;
+    background-color: var(--primary-red);
+    /* Explicitly using red */
+    color: white !important;
+    /* Force white text */
+    padding: 1.25rem 3rem;
+    border-radius: 50px;
     font-weight: 700;
-    border-radius: 9999px;
-    text-transform: uppercase;
+    font-size: 1.25rem;
     text-decoration: none;
-    transition: all 0.3s;
-    letter-spacing: 0.1em;
-    font-size: 1.1rem;
-    box-shadow: var(--shadow-lg);
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px -5px rgba(225, 29, 72, 0.4);
+    /* Colored shadow */
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 2px solid transparent;
 }
 
 .primaryButton:hover {
-    background-color: var(--primary-red);
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-xl);
+    background-color: var(--primary-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 15px 25px -5px rgba(15, 23, 42, 0.3);
 }
 
 @media (max-width: 768px) {
-    .list {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    .separator {
-        display: none;
-    }
-
     .content h2 {
-        font-size: 3rem;
+        font-size: 2.5rem;
+    }
+
+    .checkList {
+        grid-template-columns: 1fr;
+    }
+
+    .intro {
+        padding: 1.5rem;
+    }
+
+    .primaryButton {
+        padding: 1rem 2rem;
+        width: 100%;
+        justify-content: center;
     }
 }
