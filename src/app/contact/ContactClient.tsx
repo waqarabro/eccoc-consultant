@@ -2,10 +2,52 @@
 
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
+import { useState, FormEvent } from 'react';
 import Section from '@/components/Section';
 import styles from './page.module.css';
 
 export default function Contact() {
+    const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        message: ''
+    });
+    const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+    const [errorMessage, setErrorMessage] = useState('');
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setFormData(prev => ({
+            ...prev,
+            [e.target.id]: e.target.value
+        }));
+    };
+
+    const handleSubmit = async (e: FormEvent) => {
+        e.preventDefault();
+        setStatus('loading');
+        setErrorMessage('');
+
+        try {
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            });
+
+            if (!res.ok) {
+                const data = await res.json();
+                throw new Error(data.error || 'Failed to send message');
+            }
+
+            setStatus('success');
+            setFormData({ firstName: '', lastName: '', email: '', message: '' });
+        } catch (error: any) {
+            setStatus('error');
+            setErrorMessage(error.message || 'Something went wrong. Please try again.');
+        }
+    };
+
     return (
         <main>
             <div className={styles.hero}>
@@ -71,35 +113,45 @@ export default function Contact() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
-                        <form className={styles.form}>
+                        <form className={styles.form} onSubmit={handleSubmit}>
                             <div className={styles.row}>
                                 <div className={styles.group}>
                                     <label htmlFor="firstName">First Name</label>
-                                    <input type="text" id="firstName" placeholder="Jane" />
+                                    <input type="text" id="firstName" placeholder="Jane" required value={formData.firstName} onChange={handleChange} />
                                 </div>
                                 <div className={styles.group}>
                                     <label htmlFor="lastName">Last Name</label>
-                                    <input type="text" id="lastName" placeholder="Doe" />
+                                    <input type="text" id="lastName" placeholder="Doe" required value={formData.lastName} onChange={handleChange} />
                                 </div>
                             </div>
 
                             <div className={styles.group}>
                                 <label htmlFor="email">Email Address</label>
-                                <input type="email" id="email" placeholder="jane@company.com" />
+                                <input type="email" id="email" placeholder="jane@company.com" required value={formData.email} onChange={handleChange} />
                             </div>
 
                             <div className={styles.group}>
                                 <label htmlFor="message">Message</label>
-                                <textarea id="message" rows={5} placeholder="Tell us about your business goals..."></textarea>
+                                <textarea id="message" rows={5} placeholder="Tell us about your business goals..." required value={formData.message} onChange={handleChange}></textarea>
                             </div>
+
+                            {status === 'success' && (
+                                <p className={styles.successMessage}>Thank you! Your message has been sent.</p>
+                            )}
+                            {status === 'error' && (
+                                <p className={styles.errorMessage}>{errorMessage}</p>
+                            )}
 
                             <motion.button
                                 type="submit"
                                 className={styles.submitBtn}
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
+                                disabled={status === 'loading'}
                             >
-                                SEND MESSAGE <ArrowRight size={18} />
+                                {status === 'loading' ? 'SENDING...' : (
+                                    <>SEND MESSAGE <ArrowRight size={18} /></>
+                                )}
                             </motion.button>
                         </form>
                     </motion.div>

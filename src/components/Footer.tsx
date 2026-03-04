@@ -28,6 +28,7 @@ const Footer = () => {
                         <div className={styles.column}>
                             <h3>Resources</h3>
                             <nav className={styles.nav}>
+                                <Link href="/blog">Blog</Link>
                                 <Link href="/insights">Insights</Link>
                                 <Link href="#">Case Studies</Link>
                                 <Link href="#">Privacy Policy</Link>
