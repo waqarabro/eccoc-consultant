@@ -5,10 +5,10 @@
 :root {
   --background: #ffffff;
   --foreground: #0f172a;
-  /* Slate 900 - Darker, richer */
-  --primary: #E11D48;
-  /* DEFINING PRIMARY RED */
-  --primary-red: #E11D48;
+  /* Corporate Bright Blue globally replacing red */
+  --primary: #0062FF;
+  /* DEFINING PRIMARY BLUE ALIAS */
+  --primary-red: #0062FF;
   /* Rose 600 - More modern/vibrant red */
   --primary-blue: #0F172A;
   /* Slate 900 - Almost black blue */

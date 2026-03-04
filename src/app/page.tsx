@@ -1,27 +1,21 @@
-'use client';
+import type { Metadata } from 'next';
+import HomeClient from './HomeClient';
+import { JSON_LD_SCHEMA } from '@/lib/schema';
 
-import HeroSlider from '@/components/HeroSlider';
-import WhyUs from '@/components/WhyUs';
-// import ImageGrid from '@/components/ImageGrid'; // Removing as per request
-import CoreCompetencies from '@/components/CoreCompetencies';
-import WhoWeWorkBestWith from '@/components/WhoWeWorkBestWith';
-import Outcomes from '@/components/Outcomes';
-import Process from '@/components/Process';
-import Expectations from '@/components/Expectations';
-// import FinalCTA from '@/components/FinalCTA'; // Moved to layout
+export const metadata: Metadata = {
+    title: 'Top Business Consultant Australia | ecco Consultants',
+    description: 'Helping scale Australian businesses. We bring real-world experience, strategic clarity, and operational insight to drive sustained profit improvement.',
+    keywords: 'Business Consultant, Management Consultant, Australian Business Consultant, Scale Business Australia, Profit Growth Strategy',
+};
 
-export default function Home() {
-  return (
-    <main>
-      <HeroSlider />
-      <WhyUs />
-      <CoreCompetencies />
-      <Outcomes />
-      <Process />
-      <Expectations />
-      <WhoWeWorkBestWith />
-      {/* <ImageGrid /> */}
-      {/* <FinalCTA /> */}
-    </main>
-  );
+export default function Page() {
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD_SCHEMA) }}
+            />
+            <HomeClient />
+        </>
+    );
 }

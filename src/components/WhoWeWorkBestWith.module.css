@@ -87,7 +87,7 @@
 
 .list li {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 1.5rem;
     font-size: 1.125rem;
     color: #334155;
@@ -103,7 +103,6 @@
     height: 32px;
     border-radius: 10px;
     flex-shrink: 0;
-    margin-top: 4px;
     transition: transform 0.3s ease;
 }
 

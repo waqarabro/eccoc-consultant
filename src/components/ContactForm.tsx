@@ -53,8 +53,8 @@ const ContactForm = () => {
                     <div className={styles.content} style={{ transform: "translateZ(50px)" }}>
                         <h2 className={styles.title}>Intelligence Delivered.</h2>
                         <p className={styles.description}>
-                            Running a business is challenging. We help you make the decisions
-                            that matter. Book your complimentary strategy session.
+                            If one or more of these services is relevant to your business, the best next step is a conversation.
+                            Complete the form to book a Complimentary Strategy Session and we’ll discuss where to focus.
                         </p>
                     </div>
 

@@ -55,7 +55,7 @@
 }
 
 .title {
-    font-size: 5rem;
+    font-size: 4.5rem;
     line-height: 1;
     color: white;
     margin-bottom: 1.5rem;
@@ -77,9 +77,10 @@
     font-size: 1.5rem;
     color: #CBD5E1;
     /* Slate 300 */
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
     max-width: 600px;
-    line-height: 1.6;
+    line-height: 1.5;
+    font-size: 1.25rem;
 }
 
 .cta {

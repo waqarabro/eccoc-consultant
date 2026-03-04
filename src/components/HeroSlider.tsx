@@ -8,18 +8,18 @@ import styles from './HeroSlider.module.css';
 
 const slides = [
     {
-        id: 1,
-        image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop', // Meeting/Strategy
-        title: "Build a Better Business Today",
-        subtitle: "Make It Worth Something Tomorrow.",
-        description: "Where real-world experience meets practical business advice."
-    },
-    {
         id: 2,
         image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop', // Architecture/Scale
         title: "Real-World Experience",
         subtitle: "Not Just Theory.",
         description: "At ecco Consultants, every advisor has built, operated, and sold businesses of their own. That experience shapes how we work — because we’ve faced the same challenges you’re dealing with now."
+    },
+    {
+        id: 1,
+        image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop', // Meeting/Strategy
+        title: "Build a Better Business Today",
+        subtitle: "Make It Worth Something Tomorrow.",
+        description: "Where real-world experience meets practical business advice."
     },
     {
         id: 3,
