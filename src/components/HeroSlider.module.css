@@ -48,6 +48,8 @@
     flex-direction: column;
     justify-content: center;
     height: 100%;
+    padding-top: 8rem;
+    /* Dropped line for mobile */
 }
 
 .textWrapper {
@@ -164,6 +166,10 @@
 }
 
 @media (max-width: 640px) {
+    .contentContainer {
+        padding-top: 10rem;
+    }
+
     .title {
         font-size: 2.5rem;
     }

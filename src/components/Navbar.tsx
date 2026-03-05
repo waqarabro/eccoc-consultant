@@ -11,7 +11,6 @@ const navItems = [
     { name: 'Services', path: '/services' },
     { name: 'About', path: '/about' },
     { name: 'Why ecco', path: '/why-eccoc' },
-    { name: 'Blog', path: '/blog' },
     { name: 'Insights', path: '/insights' },
     { name: 'Contact', path: '/contact' },
 ];

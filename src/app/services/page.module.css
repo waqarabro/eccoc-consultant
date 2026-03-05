@@ -73,9 +73,12 @@
 }
 
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translate(0, 0);
     }
+
     50% {
         transform: translate(30px, 30px);
     }
@@ -152,6 +155,8 @@
     content: '•';
     position: absolute;
     left: 0;
+    top: 50%;
+    transform: translateY(-50%);
     color: var(--primary-red);
     font-weight: bold;
     font-size: 1.5rem;
@@ -357,7 +362,7 @@
     direction: rtl;
 }
 
-.diveRow.reverse > * {
+.diveRow.reverse>* {
     direction: ltr;
 }
 
@@ -365,14 +370,14 @@
     padding: 2rem 0;
 }
 
-.diveContent > div h3 {
+.diveContent>div h3 {
     font-size: 2rem;
     color: #0F172A;
     margin: 1.5rem 0 0.5rem 0;
     font-weight: 900;
 }
 
-.diveContent > div h4 {
+.diveContent>div h4 {
     font-size: 1rem;
     color: var(--primary-red);
     margin: 0 0 1rem 0;
@@ -381,7 +386,7 @@
     letter-spacing: 0.05em;
 }
 
-.diveContent > div p {
+.diveContent>div p {
     font-size: 1rem;
     line-height: 1.7;
     color: #475569;
@@ -610,7 +615,7 @@
     font-weight: 900;
 }
 
-.fitSection > p:first-of-type {
+.fitSection>p:first-of-type {
     font-size: 1.05rem;
     color: #64748B;
     margin-bottom: 2.5rem;
@@ -639,6 +644,8 @@
     content: '→';
     position: absolute;
     left: 0;
+    top: 50%;
+    transform: translateY(-50%);
     color: var(--primary-red);
     font-weight: bold;
     font-size: 1.2rem;
@@ -709,7 +716,7 @@
         font-size: 2rem;
     }
 
-    .diveContent > div h3 {
+    .diveContent>div h3 {
         font-size: 1.5rem;
     }
 

@@ -8,6 +8,7 @@ import WhoWeWorkBestWith from '@/components/WhoWeWorkBestWith';
 import Outcomes from '@/components/Outcomes';
 import Process from '@/components/Process';
 import Expectations from '@/components/Expectations';
+import ContactForm from '@/components/ContactForm';
 // import FinalCTA from '@/components/FinalCTA'; // Moved to layout
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
       <WhoWeWorkBestWith />
       {/* <ImageGrid /> */}
       {/* <FinalCTA /> */}
+      <ContactForm description="Running a business is challenging. We help you make the decisions that matter. Book your Complimentary strategy sessions." />
     </main>
   );
 }

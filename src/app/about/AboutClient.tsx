@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Users, Target, CheckCircle2, Heart } from 'lucide-react';
 import Section from '@/components/Section';
+import ContactForm from '@/components/ContactForm';
 import styles from './page.module.css';
 
 const coreValues = [
@@ -279,6 +280,8 @@ export default function About() {
           </motion.div>
         </div>
       </Section>
+
+      <ContactForm description="If what you’ve read resonates and you’d like to continue the conversation, we’d welcome it. Complete the form to book a Complimentary Strategy Session where we’ll learn more about your business and share how we think about growth, value, and long-term resilience." />
     </main>
   );
 }

@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Users, Zap, Target, Shield, CheckCircle2, ArrowRight } from 'lucide-react';
 import Section from '@/components/Section';
+import ContactForm from '@/components/ContactForm';
 import styles from './page.module.css';
 
 const coreDifferences = [
@@ -89,7 +90,7 @@ export default function WhyEccoc() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <span className={styles.label}>WHY ECCO</span>
+                    <span className={styles.label}>Why ecco</span>
                     <h1>
                         Advice Grounded in Experience —<br />
                         <span className={styles.gradientText}>Not Just Theory</span>
@@ -429,6 +430,8 @@ export default function WhyEccoc() {
                     </a>
                 </motion.div>
             </Section>
+
+            <ContactForm description="Choosing the right advisor matters. If you’d like to explore whether ecco is the right fit for you, complete the form to book a Complimentary Strategy Session. We’ll talk through your goals, challenges, and what genuine, practical support could look like without jargon or sales pressure." />
         </main>
     );
 }

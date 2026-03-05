@@ -20,7 +20,7 @@ const Footer = () => {
                             <nav className={styles.nav}>
                                 <Link href="/about">About Us</Link>
                                 <Link href="/services">Services</Link>
-                                <Link href="/why-us">Why Us</Link>
+                                <Link href="/why-eccoc">Why Us</Link>
                                 <Link href="/contact">Contact</Link>
                             </nav>
                         </div>
@@ -28,10 +28,10 @@ const Footer = () => {
                         <div className={styles.column}>
                             <h3>Resources</h3>
                             <nav className={styles.nav}>
-                                <Link href="/blog">Blog</Link>
                                 <Link href="/insights">Insights</Link>
-                                <Link href="#">Case Studies</Link>
-                                <Link href="#">Privacy Policy</Link>
+                                <Link href="/case-studies">Case Studies</Link>
+                                <Link href="/privacy-policy">Privacy Policy</Link>
+                                <Link href="/team">Meet the Team</Link>
                             </nav>
                         </div>
 

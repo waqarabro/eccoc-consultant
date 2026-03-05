@@ -1,0 +1,169 @@
+.main {
+    overflow-x: hidden;
+    background: #FAFAF9;
+    /* Off-white for document feel */
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+    position: relative;
+    background: white;
+    padding: 10rem 2rem 6rem;
+    text-align: center;
+    overflow: hidden;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+    color: #0F172A;
+    letter-spacing: -0.04em;
+    font-weight: 900;
+}
+
+.lastUpdated {
+    font-size: 1.1rem;
+    color: #64748B;
+    font-weight: 500;
+}
+
+/* Animated blobs */
+.blob1,
+.blob2 {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.3;
+    z-index: 0;
+    animation: float 10s ease-in-out infinite;
+}
+
+.blob1 {
+    top: -100px;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+    background: #E11D48;
+}
+
+.blob2 {
+    bottom: -100px;
+    right: -100px;
+    width: 500px;
+    height: 500px;
+    background: #3B82F6;
+    animation-delay: -5s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(30px, 30px);
+    }
+}
+
+/* ========== CONTAINER ========== */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* ========== CONTENT SECTION ========== */
+.contentSection {
+    padding: 5rem 0 8rem;
+}
+
+.documentBody {
+    background: white;
+    padding: 4rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+    border: 1px solid #E2E8F0;
+    color: #334155;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.documentBody h2 {
+    font-size: 1.75rem;
+    color: #0F172A;
+    margin: 2.5rem 0 1rem 0;
+    font-weight: 800;
+}
+
+.documentBody h2:first-child {
+    margin-top: 0;
+}
+
+.documentBody p {
+    margin-bottom: 1.5rem;
+}
+
+.documentBody ul {
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+}
+
+.documentBody li {
+    margin-bottom: 0.75rem;
+}
+
+.documentBody a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.documentBody a:hover {
+    color: var(--primary-red);
+    text-decoration: underline;
+}
+
+.documentBody address {
+    font-style: normal;
+    background: #F8FAFC;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-blue);
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .hero {
+        padding: 8rem 1rem 4rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .documentBody {
+        padding: 2rem 1.5rem;
+    }
+
+    .documentBody h2 {
+        font-size: 1.5rem;
+    }
+
+    .contentSection {
+        padding: 3rem 0 5rem;
+    }
+}

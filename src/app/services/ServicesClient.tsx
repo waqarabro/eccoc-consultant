@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Zap, Users, Target, CheckCircle2, Briefcase, TrendingUp, Rocket } from 'lucide-react';
 import Section from '@/components/Section';
+import ContactForm from '@/components/ContactForm';
 import styles from './page.module.css';
 import { useAutoCycle } from '@/hooks/useAutoCycle';
 
@@ -364,6 +365,8 @@ export default function Services() {
                     </motion.div>
                 </div>
             </Section>
+
+            <ContactForm />
         </main>
     );
 }

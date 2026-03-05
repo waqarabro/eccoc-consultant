@@ -3,7 +3,6 @@ import { Inter } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FinalCTA from '@/components/FinalCTA';
-import ContactForm from '@/components/ContactForm';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -64,7 +63,6 @@ export default function RootLayout({
         <Navbar />
         {children}
         <FinalCTA />
-        <ContactForm />
         <Footer />
       </body>
     </html>
