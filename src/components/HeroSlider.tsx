@@ -10,8 +10,8 @@ const slides = [
     {
         id: 2,
         image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop', // Architecture/Scale
-        title: "Real-World Experience",
-        subtitle: "Not Just Theory.",
+        title: "Expert Business Consultants",
+        subtitle: "Real-World Experience, Not Just Theory.",
         description: "At ecco Consultants, every advisor has built, operated, and sold businesses of their own. That experience shapes how we work — because we’ve faced the same challenges you’re dealing with now."
     },
     {

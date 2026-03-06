@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import styles from './ServiceCard.module.css';
 
 interface ServiceCardProps {
@@ -6,9 +7,10 @@ interface ServiceCardProps {
     description: string;
     points: string[];
     isActive: boolean;
+    link?: string;
 }
 
-const ServiceCard = ({ title, description, points, isActive }: ServiceCardProps) => {
+const ServiceCard = ({ title, description, points, isActive, link }: ServiceCardProps) => {
     return (
         <motion.div
             className={`${styles.card} ${isActive ? styles.active : ''}`}
@@ -32,10 +34,17 @@ const ServiceCard = ({ title, description, points, isActive }: ServiceCardProps)
                     ))}
                 </ul>
                 <div className={styles.footer}>
-                    <div className={styles.more}>
-                        Learn More
-                        <span>→</span>
-                    </div>
+                    {link ? (
+                        <Link href={link} className={styles.more}>
+                            Learn More
+                            <span>→</span>
+                        </Link>
+                    ) : (
+                        <div className={styles.more}>
+                            Learn More
+                            <span>→</span>
+                        </div>
+                    )}
                 </div>
             </div>
         </motion.div>

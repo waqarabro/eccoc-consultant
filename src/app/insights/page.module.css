@@ -252,6 +252,70 @@
     gap: 1rem;
 }
 
+/* ========== CASE STUDIES SECTION ========== */
+.caseStudySection {
+    background: linear-gradient(135deg, #F8FAFC, #F1F5F9);
+    padding: 4rem 0 2rem;
+}
+
+.caseGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.caseCard {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #E2E8F0;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 8px 16px rgba(15, 23, 42, 0.04);
+}
+
+.caseCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+    border-color: #E0E7FF;
+}
+
+.caseContent {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.caseHeader {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #F1F5F9;
+}
+
+.caseCompany {
+    font-size: 1.5rem;
+    color: #0F172A;
+    margin: 0 0 0.5rem 0;
+    font-weight: 900;
+}
+
+.caseIndustry {
+    font-size: 0.9rem;
+    color: var(--primary-red);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.caseExcerpt {
+    font-size: 1rem;
+    color: #475569;
+    line-height: 1.7;
+    margin: 0 0 2rem 0;
+    flex-grow: 1;
+}
+
 /* ========== LATEST ARTICLES (BLOG) SECTION ========== */
 .blogSection {
     background: white;

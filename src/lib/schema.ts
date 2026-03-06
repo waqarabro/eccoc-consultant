@@ -22,5 +22,53 @@ export const JSON_LD_SCHEMA = {
     },
     "sameAs": [
         "https://www.linkedin.com/company/ecco-consultants"
-    ]
+    ],
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Consulting Services",
+        "itemListElement": [
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Clarity in Strategy & Focus"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Efficient, Scalable Operations"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Aligned, High-Performance Teams"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Stronger Profit & Cash Flow"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Business Built for Value & Options"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "Predictable, Sustainable Growth"
+                }
+            }
+        ]
+    }
 };

@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import { Users, Zap, Target, Shield, CheckCircle2, ArrowRight } from 'lucide-react';
 import Section from '@/components/Section';
 import ContactForm from '@/components/ContactForm';
+import FinalCTA from '@/components/FinalCTA';
+import Link from 'next/link';
 import styles from './page.module.css';
 
 const coreDifferences = [
@@ -111,7 +113,7 @@ export default function WhyEccoc() {
                         transition={{ duration: 0.6 }}
                     >
                         <p className={styles.problemText}>
-                            Most business owners don't struggle because they lack ideas. They struggle because the advice they receive doesn't always hold up in the real world.
+                            Most business owners don't struggle because they lack ideas. They struggle because the advice they receive doesn't always hold up in the real world <a href="https://hbr.org/1982/09/consulting-is-more-than-giving-advice" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: 'inherit', opacity: 0.8 }}>(as often researched in consulting efficacy)</a>.
                         </p>
                         <p className={styles.solutionText}>
                             <strong>At ecco Consultants, our perspective is different.</strong> Every advisor at ecco has built, operated, and sold businesses of their own. We've lived through the pressure, the uncertainty, the trade-offs, and the responsibility that comes with ownership. That experience shapes how we think, how we advise, and how we work with you.
@@ -197,7 +199,7 @@ export default function WhyEccoc() {
                         viewport={{ once: true }}
                         transition={{ delay: 0.2, duration: 0.6 }}
                     >
-                        <p><strong>You can expect:</strong></p>
+                        <p><strong>You can expect (see our <Link href="/services" style={{ textDecoration: 'underline', color: 'inherit' }}>Services</Link>):</strong></p>
                     </motion.div>
 
                     <div className={styles.practiceGrid}>
@@ -431,6 +433,7 @@ export default function WhyEccoc() {
                 </motion.div>
             </Section>
 
+            <FinalCTA />
             <ContactForm description="Choosing the right advisor matters. If you’d like to explore whether ecco is the right fit for you, complete the form to book a Complimentary Strategy Session. We’ll talk through your goals, challenges, and what genuine, practical support could look like without jargon or sales pressure." />
         </main>
     );

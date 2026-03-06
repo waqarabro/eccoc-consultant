@@ -5,6 +5,7 @@ import { TrendingUp, Zap, Cog, Target, Users, ArrowRight, Clock, User } from 'lu
 import Section from '@/components/Section';
 import Link from 'next/link';
 import ContactForm from '@/components/ContactForm';
+import FinalCTA from '@/components/FinalCTA';
 import styles from './page.module.css';
 import { BLOG_POSTS } from '@/lib/blogData';
 
@@ -32,7 +33,30 @@ const insightCategories = [
     {
         icon: <Users size={28} />,
         title: "People and Performance",
-        description: "Content pending for this section."
+        description: "Insights focused on building capable, accountable teams and strengthening leadership effectiveness so that expectations are clear, performance improves, and the business can operate successfully without relying on the owner for every decision."
+    }
+];
+
+const FEATURED_CASE_STUDIES = [
+    {
+        company: "ABSAFE",
+        industry: "Safety and Risk Management",
+        excerpt: "Absafe, a safety and risk management company, first engaged with ecco Consultants in May 2023. The goal was to enhance both personal and business performance through strategic guidance and support."
+    },
+    {
+        company: "RTB Concepts",
+        industry: "Commercial Services",
+        excerpt: "RTB Concepts engaged ecco Consultants to address business challenges. The focus was on cost reduction, improving recruitment processes, and gaining clarity on financial performance."
+    },
+    {
+        company: "My Home Connect",
+        industry: "Home Security & Automation",
+        excerpt: "We wouldn't be where we are today without ecco Consultants helping us. Frank Colli and his team challenge our thinking, which makes us look at things in different ways."
+    },
+    {
+        company: "OmniVision",
+        industry: "Commercial Surveillance & Security",
+        excerpt: "We've been in business for 15 years and started working with ecco Consultants. The positive changes to OmniVision have been spectacular."
     }
 ];
 
@@ -124,6 +148,52 @@ export default function InsightsPage() {
                 </div>
             </Section>
 
+            {/* FEATURED CASE STUDIES */}
+            <Section className={styles.caseStudySection}>
+                <div className={styles.container}>
+                    <motion.div
+                        className={styles.sectionHeader}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                    >
+                        <h2>Case Studies</h2>
+                        <p>How we've helped business owners create real results</p>
+                    </motion.div>
+
+                    <motion.div
+                        className={styles.caseGrid}
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                    >
+                        {FEATURED_CASE_STUDIES.map((study, idx) => (
+                            <motion.div
+                                key={idx}
+                                className={styles.caseCard}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.1 * idx, duration: 0.6 }}
+                                viewport={{ once: true }}
+                            >
+                                <div className={styles.caseContent}>
+                                    <div className={styles.caseHeader}>
+                                        <h3 className={styles.caseCompany}>{study.company}</h3>
+                                        <span className={styles.caseIndustry}>{study.industry}</span>
+                                    </div>
+                                    <p className={styles.caseExcerpt}>{study.excerpt}</p>
+                                    <Link href="/case-studies" className={styles.readMore}>
+                                        Learn More <ArrowRight size={16} />
+                                    </Link>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </div>
+            </Section>
+
             {/* BLOG GRID SECTION */}
             <Section className={styles.blogSection}>
                 <div className={styles.container}>
@@ -178,6 +248,7 @@ export default function InsightsPage() {
                 </div>
             </Section>
 
+            <FinalCTA />
             <ContactForm
                 description="If these insights reflect what you’re seeing in your business, a conversation can help. Complete the form to book a Complimentary Strategy Session and apply this thinking to your business."
             />

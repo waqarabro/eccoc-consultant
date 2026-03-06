@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Zap, Users, Target, CheckCircle2, Briefcase, TrendingUp, Rocket } from 'lucide-react';
 import Section from '@/components/Section';
 import ContactForm from '@/components/ContactForm';
+import FinalCTA from '@/components/FinalCTA';
 import styles from './page.module.css';
 import { useAutoCycle } from '@/hooks/useAutoCycle';
 
@@ -158,7 +159,7 @@ export default function Services() {
                         transition={{ duration: 0.6 }}
                     >
                         <div className={styles.introParagraph}>
-                            <p>We don't provide <span className={styles.highlight}>one-size-fits-all programs</span>. We work with owners to address <span className={styles.highlight}>what's holding the business back</span> — improving <span className={styles.highlight}>performance today</span> while building <span className={styles.highlight}>value for the future</span>.</p>
+                            <p>We don&apos;t provide <span className={styles.highlight}>one-size-fits-all programs</span>. We work with owners to address <span className={styles.highlight}>what&apos;s holding the business back</span> — improving <span className={styles.highlight}>performance today</span> while building <span className={styles.highlight}>value for the future</span>.</p>
                         </div>
                     </motion.div>
 
@@ -181,7 +182,7 @@ export default function Services() {
                         >
                             <ul>
                                 <li>Where to focus — and where not to</li>
-                                <li>What's actually driving results vs. noise</li>
+                                <li>What&apos;s actually driving results vs. noise</li>
                                 <li>Decisions aligned with personal and commercial goals</li>
                             </ul>
                         </motion.div>
@@ -341,7 +342,7 @@ export default function Services() {
                     >
                         <div className={styles.philosophyBox}>
                             <h3>We believe in practical progress, not rigid programs.</h3>
-                            <p>We're guided by the experience of consultants who have been exactly where you are now — building, scaling, and exiting businesses themselves.</p>
+                            <p>We&apos;re guided by the experience of consultants who have been exactly where you are now — building, scaling, and exiting businesses themselves.</p>
                         </div>
                     </motion.div>
 
@@ -361,11 +362,12 @@ export default function Services() {
                             <li>Care about building a business that works — not just keeping busy</li>
                             <li>Are committed to driving their business forward</li>
                         </ul>
-                        <p className={styles.fitCTA}>If that sounds like you, we're likely to be a good fit.</p>
+                        <p className={styles.fitCTA}>If that sounds like you, we&apos;re likely to be a good fit.</p>
                     </motion.div>
                 </div>
             </Section>
 
+            <FinalCTA />
             <ContactForm />
         </main>
     );

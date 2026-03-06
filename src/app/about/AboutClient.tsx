@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Users, Target, CheckCircle2, Heart } from 'lucide-react';
 import Section from '@/components/Section';
 import ContactForm from '@/components/ContactForm';
+import FinalCTA from '@/components/FinalCTA';
+import Link from 'next/link';
 import styles from './page.module.css';
 
 const coreValues = [
@@ -83,7 +85,7 @@ export default function About() {
                 The best business advice comes from people who have actually run businesses themselves.
               </p>
               <p>
-                Every advisor at ecco has built, operated, and sold businesses. We've experienced the pressure of ownership, the responsibility of leadership, and the complexity that comes with growth. That lived experience shapes how we think, how we advise, and how we work with our clients.
+                Every <Link href="/team" style={{ textDecoration: 'underline', fontWeight: 500 }}>trusted advisor</Link> at ecco has built, operated, and sold businesses. We've experienced the pressure of ownership, the responsibility of leadership, and the complexity that comes with growth. That lived experience shapes how we think, how we advise, and how we work with our clients.
               </p>
             </div>
           </motion.div>
@@ -281,6 +283,7 @@ export default function About() {
         </div>
       </Section>
 
+      <FinalCTA />
       <ContactForm description="If what you’ve read resonates and you’d like to continue the conversation, we’d welcome it. Complete the form to book a Complimentary Strategy Session where we’ll learn more about your business and share how we think about growth, value, and long-term resilience." />
     </main>
   );

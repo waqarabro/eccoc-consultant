@@ -6,7 +6,14 @@ import ServiceCard from './ServiceCard';
 import { useAutoCycle } from '@/hooks/useAutoCycle';
 import styles from './CoreCompetencies.module.css';
 
-const competencies = [
+interface Competency {
+    title: string;
+    description: string;
+    points: string[];
+    link?: string;
+}
+
+const competencies: Competency[] = [
     {
         title: 'Efficient, Scalable Operations',
         description: 'Improving how your business runs day to day — reducing friction, strengthening systems, and creating consistency as the business grows.',
@@ -14,7 +21,8 @@ const competencies = [
             'Reducing friction',
             'Strengthening systems',
             'Creating consistency'
-        ]
+        ],
+        link: '/services/scalable-operations'
     },
     {
         title: 'Aligned, High-Performance Teams',
@@ -23,7 +31,8 @@ const competencies = [
             'Clarifying roles',
             'Aligning expectations',
             'Driving accountability'
-        ]
+        ],
+        link: '/services/aligned-high-performance-teams'
     },
     {
         title: 'Stronger Profit & Cash Flow',
@@ -32,7 +41,8 @@ const competencies = [
             'Identifying profit leakage',
             'Addressing pricing issues',
             'Commercially sound solutions'
-        ]
+        ],
+        link: '/services/profit-and-cash-flow'
     },
     {
         title: 'Business Built for Value & Options',
@@ -41,7 +51,8 @@ const competencies = [
             'Reducing dependency',
             'Increasing resilience',
             'Creating options'
-        ]
+        ],
+        link: '/services/value-and-options'
     },
     {
         title: 'Predictable, Sustainable Growth',
@@ -50,16 +61,18 @@ const competencies = [
             'Intentional growth',
             'Manageable scaling',
             'Maintaining control'
-        ]
+        ],
+        link: '/services/sustainable-growth'
     },
     {
-        title: 'Sales & Marketing',
-        description: 'Building dynamic sales teams and creative marketing solutions to ensure your sales funnel remains full and growth is maintained.',
+        title: 'Clarity in Strategy & Focus',
+        description: 'Step back from the noise and regain clarity on where to focus, what truly drives results, and how to align choices with goals.',
         points: [
-            'Dynamic sales teams',
-            'Creative marketing',
-            'Full sales funnel'
-        ]
+            'Focus vs. distraction',
+            'What truly drives results',
+            'Decisions aligned to goals'
+        ],
+        link: '/services/clarity-in-strategy'
     }
 ];
 
@@ -114,6 +127,7 @@ const CoreCompetencies = () => {
                             description={comp.description}
                             points={comp.points}
                             isActive={index === activeIndex}
+                            link={comp.link}
                         />
                     </motion.div>
                 ))}
