@@ -9,7 +9,7 @@ import Outcomes from '@/components/Outcomes';
 import Process from '@/components/Process';
 import Expectations from '@/components/Expectations';
 import ContactForm from '@/components/ContactForm';
-// import FinalCTA from '@/components/FinalCTA'; // Moved to layout
+import FinalCTA from '@/components/FinalCTA';
 
 export default function Home() {
   return (
@@ -22,7 +22,7 @@ export default function Home() {
       <Expectations />
       <WhoWeWorkBestWith />
       {/* <ImageGrid /> */}
-      {/* <FinalCTA /> */}
+      <FinalCTA />
       <ContactForm description="Running a business is challenging. We help you make the decisions that matter. Book your Complimentary strategy sessions." />
     </main>
   );
