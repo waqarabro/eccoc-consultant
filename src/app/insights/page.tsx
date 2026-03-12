@@ -122,28 +122,39 @@ export default function InsightsPage() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         viewport={{ once: true }}
                     >
-                        {insightCategories.map((insight, idx) => (
-                            <motion.div
-                                key={idx}
-                                className={styles.insightCard}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.1 * idx, duration: 0.6 }}
-                                viewport={{ once: true }}
-                            >
-                                <div className={styles.insightHeader}>
-                                    <div className={styles.cardIcon}>
-                                        {insight.icon}
+                        {insightCategories.map((insight, idx) => {
+                            const categorySlugs: Record<string, string> = {
+                                "Profitability & Business Performance": "profitability",
+                                "Marketing & Sales Growth": "marketing",
+                                "Operations & Efficiency": "operations",
+                                "Preparing a Business for Sale & Exit Planning": "exit-planning",
+                                "People and Performance": "people"
+                            };
+                            const slug = categorySlugs[insight.title];
+
+                            return (
+                                <motion.div
+                                    key={idx}
+                                    className={styles.insightCard}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.1 * idx, duration: 0.6 }}
+                                    viewport={{ once: true }}
+                                >
+                                    <div className={styles.insightHeader}>
+                                        <div className={styles.cardIcon}>
+                                            {insight.icon}
+                                        </div>
+                                        <h3>{insight.title}</h3>
                                     </div>
-                                    <h3>{insight.title}</h3>
-                                </div>
-                                <p>{insight.description}</p>
-                                <button className={styles.viewButton}>
-                                    View Insights
-                                    <ArrowRight size={18} />
-                                </button>
-                            </motion.div>
-                        ))}
+                                    <p>{insight.description}</p>
+                                    <Link href={`/blog?category=${slug}`} className={styles.viewButton}>
+                                        View Insights
+                                        <ArrowRight size={18} />
+                                    </Link>
+                                </motion.div>
+                            );
+                        })}
                     </motion.div>
                 </div>
             </Section>
@@ -159,7 +170,7 @@ export default function InsightsPage() {
                         viewport={{ once: true }}
                     >
                         <h2>Case Studies</h2>
-                        <p>How we've helped business owners create real results</p>
+                        <p>How we've helped business owners create results</p>
                     </motion.div>
 
                     <motion.div
@@ -188,60 +199,6 @@ export default function InsightsPage() {
                                         Learn More <ArrowRight size={16} />
                                     </Link>
                                 </div>
-                            </motion.div>
-                        ))}
-                    </motion.div>
-                </div>
-            </Section>
-
-            {/* BLOG GRID SECTION */}
-            <Section className={styles.blogSection}>
-                <div className={styles.container}>
-                    <motion.div
-                        className={styles.sectionHeader}
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                        viewport={{ once: true }}
-                    >
-                        <h2>Latest Articles</h2>
-                        <p>Fresh perspectives and practical advice</p>
-                    </motion.div>
-
-                    <motion.div
-                        className={styles.blogGrid}
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ duration: 0.8 }}
-                        viewport={{ once: true }}
-                    >
-                        {BLOG_POSTS.map((post, idx) => (
-                            <motion.div
-                                key={post.id}
-                                className={styles.blogCard}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.1 * idx, duration: 0.6 }}
-                                viewport={{ once: true }}
-                            >
-                                <Link href={`/insights/${post.id}`} className={styles.cardInternalLink}>
-                                    <div className={styles.imageWrapper}>
-                                        <img src={post.image} alt={post.title} className={styles.cardImage} />
-                                        <div className={styles.categoryBadge}>{post.category}</div>
-                                    </div>
-                                    <div className={styles.cardContent}>
-                                        <div className={styles.cardMeta}>
-                                            <span className={styles.metaItem}><Clock size={14} /> {post.date}</span>
-                                            <span className={styles.metaDivider}>•</span>
-                                            <span className={styles.metaItem}><User size={14} /> {post.author}</span>
-                                        </div>
-                                        <h2 className={styles.cardTitle}>{post.title}</h2>
-                                        <p className={styles.cardExcerpt}>{post.excerpt}</p>
-                                        <span className={styles.readMore}>
-                                            Read Article <ArrowRight size={16} />
-                                        </span>
-                                    </div>
-                                </Link>
                             </motion.div>
                         ))}
                     </motion.div>
