@@ -15,16 +15,30 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         return { title: 'Post Not Found' };
     }
 
+    const baseUrl = 'https://eccoc.com.au';
+    const postUrl = `${baseUrl}/insights/${slug}`;
+    const imageUrl = post.image.startsWith('http') ? post.image : `${baseUrl}${post.image}`;
+
     return {
         title: `${post.title} | ecco Consultants`,
         description: post.excerpt,
+        alternates: {
+            canonical: postUrl,
+        },
         openGraph: {
             title: post.title,
             description: post.excerpt,
-            images: [post.image],
+            url: postUrl,
+            images: [imageUrl],
             type: 'article',
             authors: [post.author],
             publishedTime: post.date,
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: post.title,
+            description: post.excerpt,
+            images: [imageUrl],
         }
     };
 }

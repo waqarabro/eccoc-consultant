@@ -6,26 +6,23 @@ import Section from '@/components/Section';
 import Link from 'next/link';
 import styles from './page.module.css';
 
+import { BlogPost } from '@/lib/blogData';
+
 interface BlogPostProps {
-    post: {
-        id: string;
-        title: string;
-        excerpt: string;
-        date: string;
-        author: string;
-        category: string;
-        image: string;
-    };
+    post: BlogPost;
 }
 
 export default function BlogPostClient({ post }: BlogPostProps) {
+    const baseUrl = 'https://eccoc.com.au';
+    const imageUrl = post.image.startsWith('http') ? post.image : `${baseUrl}${post.image}`;
+
     // Injecting JSON-LD explicitly for the article payload
     const jsonLd = {
         '@context': 'https://schema.org',
         '@type': 'Article',
         headline: post.title,
         description: post.excerpt,
-        image: post.image,
+        image: imageUrl,
         datePublished: new Date(post.date).toISOString(),
         author: {
             '@type': 'Person',
@@ -36,7 +33,7 @@ export default function BlogPostClient({ post }: BlogPostProps) {
             name: 'ecco Consultants',
             logo: {
                 '@type': 'ImageObject',
-                url: 'https://eccoc.com.au/logo.png',
+                url: `${baseUrl}/logo.png`,
             },
         },
     };
@@ -108,26 +105,10 @@ export default function BlogPostClient({ post }: BlogPostProps) {
             <Section className={styles.articleSection}>
                 <div className={styles.container}>
                     <div className={styles.articleGrid}>
-                        <article className={styles.content}>
-                            <h2>The Challenge of Scale</h2>
-                            <p>For many business owners, growth feels like the ultimate goal. But unmanaged growth creates friction. As order volumes increase, systems that worked perfectly for a team of five suddenly break under the weight of fifteen.</p>
-                            <p>When this happens, the symptoms are almost always the same: quality drops, margins erode because of inefficiencies, and the founder ends up stepping back into day-to-day operations to "put out fires."</p>
-
-                            <blockquote>
-                                "Revenue is vanity, profit is sanity, but cash is reality. Scaling without an operational blueprint destroys cash."
-                            </blockquote>
-
-                            <h3>Why Best Practices Break</h3>
-                            <p>Most consultants will tell you to implement an ERP or hire a layer of middle management. The reality is much simpler: you need core process consistency. Before you scale, your baseline operations must run without your direct input.</p>
-
-                            <ul>
-                                <li><strong>Document the core:</strong> Focus on the 20% of processes that drive 80% of value.</li>
-                                <li><strong>Measure what matters:</strong> Implement 3-5 operational KPIs that lead, rather than lag.</li>
-                                <li><strong>Empower the floor:</strong> Push decision-making down to where the information actually lives.</li>
-                            </ul>
-
-                            <p>Scaling successfully requires stepping back and engineering the machine, rather than just running faster inside it.</p>
-                        </article>
+                        <article 
+                            className={styles.content}
+                            dangerouslySetInnerHTML={{ __html: post.content }}
+                        />
 
                         {/* SIDEBAR */}
                         <aside className={styles.sidebar}>

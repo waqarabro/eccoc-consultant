@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { BLOG_POSTS } from '@/lib/blogData';
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://eccoc.com.au';
@@ -77,6 +78,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: 'monthly',
             priority: 0.7,
         },
-        // We can add insights and case-studies once dynamic routing is built for the individual entries.
+        // Blog Posts / Insights
+        ...BLOG_POSTS.map((post) => ({
+            url: `${baseUrl}/insights/${post.id}`,
+            lastModified: new Date(post.date),
+            changeFrequency: 'monthly' as const,
+            priority: 0.6,
+        })),
     ];
 }
