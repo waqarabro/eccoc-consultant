@@ -11,6 +11,83 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
     {
+        id: 'why-your-revenue-is-growing-but-your-profit-isnt',
+        title: "Why Your Revenue Is Growing But Your Profit Isn't — And How to Fix It",
+        excerpt: "One of the most common frustrations among SME business owners is the gap between top-line growth and bottom-line reality. Learn the most common culprits and how to turn things around.",
+        date: 'April 10, 2026',
+        author: 'Jeff Downs',
+        category: 'Profitability & Business Performance',
+        image: '/images/blog/Why-Your-Revenue-Is-Growing-But-Your-Profit-Isnt-And-How-to-Fix-It.png',
+        content: `
+            <p>More sales. More clients. More busyness. Yet somehow, at the end of the month, the numbers in your bank account don't reflect all that activity. If this sounds familiar, you're not alone — and you're not imagining it.</p>
+            <p>One of the most common frustrations we see among small and medium-sized business owners is the gap between top-line growth and bottom-line reality. Revenue climbs, the team expands, the workload increases — and yet profit either stagnates or quietly shrinks. It's demoralising, and it can be genuinely confusing if you don't know where to look.</p>
+            <p>The good news is that there are identifiable reasons why this happens. Once you understand them, you can do something about them. Let's work through the most common culprits and then talk about what you can actually do to turn things around.</p>
+
+            <h3>The Pricing Problem: Selling Yourself Short</h3>
+            <p>In most cases, if you dig deep enough into a business that's growing without profitable results, you'll find a pricing issue at the heart of it. Poor pricing decisions are arguably the single biggest driver of profit underperformance in small and medium-sized businesses, and they're also one of the most overlooked.</p>
+            <p>Many business owners set their prices early in the life of the business, often based on what competitors were charging or what felt comfortable to ask for at the time. The problem is that prices rarely keep pace with the true cost of delivering the product or service. Wages go up, overheads creep higher, suppliers increase their rates — but prices stay where they are because raising them feels risky. There's a fear of losing clients, of appearing greedy, of having an awkward conversation.</p>
+            <p>What this means in practice is that you're doing more work for the same or less margin. You might be winning more business, but each new piece of work is contributing less to your bottom line than the last. Revenue grows, but profit doesn't follow.</p>
+            <p>The fix starts with understanding your true cost of delivery — not just the obvious direct costs, but every hour of time, every overhead, every piece of infrastructure that goes into producing and delivering your product or service. Once you know your real cost base, you can price properly. Pricing for profit, rather than for volume, is one of the most powerful shifts an owner can make.</p>
+
+            <h3>Cost Creep: The Overhead That Quietly Multiplies</h3>
+            <p>Growing businesses attract costs. Every new client seems to justify a new staff member, a new piece of software, a new vehicle, a new office space. Each individual decision makes sense in isolation — but collectively, overhead can grow faster than revenue without anyone noticing.</p>
+            <p>This is what's known as cost creep, and it's almost invisible in the moment. A new subscription here. An additional part-time hire there. A slightly bigger premises. A marketing retainer. None of these feel dramatic on their own. But when you step back and compare your cost structure today to what it looked like two or three years ago, the difference can be significant.</p>
+            <p>The discipline required here is to regularly and honestly audit your cost base with the same rigour you'd apply to a sales target. Ask yourself: is every cost still justified? Is it contributing to revenue or profit? Could it be reduced or eliminated without meaningful impact on operations or customer experience? For most businesses, this exercise surfaces several costs that have simply been running on autopilot.</p>
+
+            <h3>The Wrong Revenue Mix</h3>
+            <p>Not all revenue is created equal. Some clients, products, or services generate strong margins. Others barely cover their costs. If your business is growing but your profit isn't, it's worth asking whether the growth is happening in the right places.</p>
+            <p>It's surprisingly common for businesses to find, once they run the numbers properly, that a significant portion of their revenue is actually marginally profitable or even loss-making. This can happen for a number of reasons:</p>
+            <ul>
+                <li><strong>Low-margin clients who consume high levels of service:</strong> Some clients pay reasonable rates but require disproportionate time, attention, and resources. When you account for the true cost of servicing them, the margin is thin.</li>
+                <li><strong>Legacy pricing that hasn't been updated:</strong> Long-standing clients are often on rates set years ago. Without updates, these accounts quietly become your least profitable.</li>
+                <li><strong>Products or services that look busy but don't contribute:</strong> Activity doesn't equal margin. Many offerings generate high work volume but minimal bottom-line impact.</li>
+            </ul>
+            <p>The discipline here is to regularly analyse profitability by client, by product line, and by service offering. You may find that focusing on fewer, higher-margin opportunities significantly improves your bottom line without requiring any additional revenue growth at all.</p>
+
+            <h3>Discounting: The Habit That's Costing You More Than You Think</h3>
+            <p>Discounting is one of those things that feels harmless and even strategic in the moment. But the harm is larger than most business owners realise. Because discounts come straight off your margin, not your revenue, their impact is amplified.</p>
+            <p>If your gross margin is 40% and you offer a 10% discount, you haven't reduced your margin by 10% — you've reduced it by 25%. To maintain the same profitability, you'd need to generate significantly more volume. The maths work against you quickly.</p>
+            <p>Beyond the immediate impact, there's a longer-term issue. Clients won on price tend to stay on price. They're often harder to work with and less loyal. Clients won at full value, on the strength of your expertise, tend to be the opposite.</p>
+
+            <h3>Overhead That Scales Faster Than Revenue</h3>
+            <p>There's a particular trap that catches growing businesses: infrastructure and team costs that are put in place for anticipated revenue that doesn't arrive as planned. Hiring ahead of growth is a classic example. If demand materialises slower than expected, you're carrying a cost base that your revenue can't comfortably support.</p>
+            <p>Growing businesses need capacity, but the timing and scale of those investments matter enormously. Staged investment, aligned closely to actual rather than projected revenue, is almost always the more financially sound approach.</p>
+
+            <h3>What You Can Do About It: A Practical Starting Point</h3>
+            <ul>
+                <li><strong>Conduct a pricing audit:</strong> Review all products, services, and client accounts. Do they reflect your current cost base and value?</li>
+                <li><strong>Run a margin analysis by client and service:</strong> Identify who and what is genuinely profitable. Focus your growth efforts there.</li>
+                <li><strong>Audit your cost base with fresh eyes:</strong> Review every recurring cost and ask if it's still earning its place.</li>
+                <li><strong>Establish a clear discounting policy:</strong> Create internal guidelines rather than making decisions on the fly.</li>
+                <li><strong>Track margin, not just revenue:</strong> Build the reporting habits to catch margin compression early.</li>
+            </ul>
+
+            <p>Revenue without profit is just activity. Profit is the only measure that truly reflects the health of a business. It doesn't build wealth, create security, or reward your hard work unless it reaches the bottom line.</p>
+
+            <div style="background: #f8fafc; padding: 2rem; border-radius: 1rem; margin-top: 3rem;">
+                <h3 style="margin-top: 0;">3 Ways Ecco Consulting Can Help Your Business Thrive</h3>
+                <p>At Ecco Consulting, we help business owners build stronger, more valuable businesses. Whether you’re looking to improve profitability, increase operational efficiency, or prepare for a future sale, we provide expert guidance tailored to your goals.</p>
+                
+                <div style="margin-top: 1.5rem;">
+                    <strong>1. Free 90-Minute Consultation</strong>
+                    <p>Discover opportunities to optimise your business with a complimentary strategy session. Gain valuable insights into improving profitability, efficiency, and overall business value. <a href="/contact">Click Here</a> to schedule your session.</p>
+                </div>
+                
+                <div style="margin-top: 1rem;">
+                    <strong>2. Business Growth & Profitability Strategies</strong>
+                    <p>We work with you to identify key areas for revenue growth, cost control, and operational improvements, helping you run a more profitable and scalable business.</p>
+                </div>
+                
+                <div style="margin-top: 1rem;">
+                    <strong>3. Building a More Valuable & Sellable Business</strong>
+                    <p>Whether you’re considering a future sale or just want to make your business more desirable to potential acquirers, we help you enhance value and maximise your exit opportunities.</p>
+                </div>
+                
+                <p style="margin-top: 1.5rem; font-weight: bold;">Simply contact us on 03 8516 9999 or info@eccoc.com.au to learn more</p>
+            </div>
+        `
+    },
+    {
         id: 'the-power-of-good-better-best-pricing',
         title: 'The Power of Good, Better, Best Pricing',
         excerpt: 'Good-Better-Best (GBB) pricing is more than a pricing tactic—it’s a proven framework that helps you serve different customer segments, enhance perceived value, and boost average transaction values.',
