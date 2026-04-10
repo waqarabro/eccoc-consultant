@@ -1097,7 +1097,7 @@ export const BLOG_POSTS: BlogPost[] = [
         date: 'April 10, 2026',
         author: 'Jeff Downs',
         category: 'Profitability & Business Performance',
-        image: '/images/blog/Pricing Strategies That Maximise Profits Without Losing Customers.png',
+        image: '/images/blog/Pricing-Strategies-That-Maximise-Profits-Without-Losing-Customers.png',
         content: `
             <p>Getting your pricing right is one of the most important decisions you’ll make as a business owner. Price too high and you risk losing customers. Price too low and you leave money on the table—or worse, you may not be able to deliver your product or service profitably at all.</p>
             <p>Many business owners, especially those in established companies turning over $2 million or more, instinctively focus on volume to drive growth. That’s understandable—more customers feel like more success. But what if better profitability didn’t always mean finding more customers? What if it simply meant pricing smarter?</p>
