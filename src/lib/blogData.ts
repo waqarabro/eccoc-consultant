@@ -11,6 +11,85 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
     {
+        id: 'the-power-of-good-better-best-pricing',
+        title: 'The Power of Good, Better, Best Pricing',
+        excerpt: 'Good-Better-Best (GBB) pricing is more than a pricing tactic—it’s a proven framework that helps you serve different customer segments, enhance perceived value, and boost average transaction values.',
+        date: 'April 10, 2026',
+        author: 'Jeff Downs',
+        category: 'Profitability & Business Performance',
+        image: '/images/blog/The-Power-of-Good-Better-Best-Pricing.png',
+        content: `
+            <p>When it comes to setting prices, many business owners feel caught between a rock and a hard place. Price too low and you risk undercutting your own profitability. Price too high and you may lose customers to cheaper alternatives. But what if there was a way to let your customers decide what they’re willing to pay—without sacrificing your margins? That’s exactly what the Good-Better-Best (GBB) pricing model achieves.</p>
+            <p>GBB pricing is more than a pricing tactic—it’s a proven framework that helps you serve different customer segments, enhance perceived value, and boost average transaction values. It’s especially useful for businesses that want to increase profitability without alienating price-sensitive customers or compromising on service standards.</p>
+
+            <h3>What Is Good-Better-Best Pricing?</h3>
+            <p>At its core, the Good-Better-Best model is a tiered pricing strategy. It offers customers three distinct options, each representing a different level of value. The “Good” tier is the entry-level offer—basic but functional. The “Better” tier builds on this by adding enhancements or extra features. The “Best” tier delivers the most comprehensive version, often including premium features, access, or support. This approach doesn’t just introduce multiple price points—it frames a conversation about value, quality, and choice.</p>
+            <p>The structure allows businesses to present an accessible offer, a high-value offer, and a premium offer—all without overwhelming the customer or devaluing the service. Each tier caters to a specific type of buyer, and by offering a clear upgrade path, it becomes easier to increase transaction size without relying on traditional upselling.</p>
+
+            <h3>Why It Works: The Psychology Behind the Model</h3>
+            <p>The success of GBB pricing is deeply rooted in customer psychology. Humans rarely evaluate price in isolation—we evaluate it in relation to other options. When presented with three choices, we instinctively look for contrast and anchoring cues. The most expensive option acts as a price anchor, making the mid-tier seem more reasonable and balanced by comparison. As a result, many customers default to the middle tier, which feels like the smart, “not too cheap, not too extravagant” option.</p>
+            <p>Another powerful psychological force at play is loss aversion. People are more motivated to avoid losing something than they are to gain something of equal value. When you highlight what the lower-tier customer is missing out on—be it priority service, deeper insights, or faster delivery—you subtly create the desire to upgrade. They don’t want to miss out on the extra value others are enjoying.</p>
+
+            <p>GBB pricing also mitigates the feeling of being pushed into a corner. Instead of being told, “This is the price—take it or leave it,” customers feel empowered to choose. And by limiting the options to three, the model avoids overwhelming them. Too many choices can result in decision fatigue, where the customer stalls or walks away. But three clearly differentiated tiers create structure, helping customers reach a confident decision faster.</p>
+            <p>This model also acknowledges that your customers are not all the same. Some prioritise cost savings and are happy with a bare-bones solution. Others want peace of mind, faster turnaround, or access to expert help—and are willing to pay more for it. GBB pricing respects these differences and builds customer satisfaction into your pricing structure.</p>
+
+            <h3>Traditional Businesses That Use Good-Better-Best</h3>
+            <p>The GBB model has been used for decades in traditional industries. Car manufacturers, for example, offer base models with essential features, mid-tier models with convenience upgrades, and high-end versions with luxury options and advanced technology. This structure allows them to serve budget-conscious buyers and prestige-focused customers at the same time.</p>
+            <p>Hotels also rely heavily on this model. A standard room gives you the basics, a deluxe room adds comfort and space, and a suite offers exclusivity, premium amenities, and exceptional service. Guests choose based on the experience they’re after and what they’re willing to pay.</p>
+            <p>Retailers apply it in everything from electronics to clothing. Appliance stores will often stock a budget model, a mid-range one, and a high-end version of the same item. The low-priced item draws attention, but the higher tiers capture greater profit margins.</p>
+            <p>In telecommunications, mobile phone plans are another clear example. Basic prepaid plans offer low-cost, limited usage. Mid-range plans increase data and features. Premium plans provide unlimited access, international options, and additional services.</p>
+
+            <h3>Non-Traditional or Unexpected Users of the Model</h3>
+            <p>What’s most interesting about GBB pricing today is how many non-traditional businesses are adopting it successfully. It’s no longer limited to cars and hotels—professional service firms, trades businesses, health providers, and even software companies now use this model to drive growth and improve client satisfaction.</p>
+            <p>Consultants and accountants often bundle their offerings into packages. A “good” tier may include only compliance or tax work. The “better” tier adds planning sessions and quarterly reports. The “best” tier includes advisory services, monthly reviews, and strategic workshops.</p>
+            <p>Trades and home service providers—electricians, plumbers, HVAC technicians—are using GBB to offer tiered service calls. One air conditioning company, for example, moved from a single flat fee to three service levels: a basic clean, a full system check and tune-up, and a premium package that includes a full performance audit, filter replacements, and priority follow-up.</p>
+            <p>In the digital space, GBB pricing is especially powerful. SaaS businesses often start with a free or low-cost version of their product, offering only core features. Their mid-tier plans unlock advanced tools or integrations. Premium versions include concierge onboarding, analytics dashboards, or dedicated support. This helps users grow with the product and increases customer lifetime value.</p>
+
+            <h3>Benefits for Business Owners</h3>
+            <p>Implementing a GBB strategy can deliver immediate and long-term benefits to your business. First, it increases your average transaction size without requiring more customers. When customers choose the middle or premium tier, you’re earning more per sale with no additional effort.</p>
+            <p>It also makes your value proposition clearer. When you take the time to define what’s included in each tier, you and your team gain confidence in how you present and sell your services. Prospects better understand what they’re getting and what they’re not, which reduces friction in the sales process.</p>
+            <p>Importantly, GBB pricing offers a built-in upgrade path. A customer who starts with a lower-tier service may naturally move up as their needs grow, without requiring you to reinvent your service offer or re-negotiate pricing from scratch.</p>
+            <p>For many businesses, this model also reduces price sensitivity. Customers are less likely to haggle or object to the price when they feel they’ve been given a choice. They’re also more likely to remain loyal if they feel that they can scale their service up or down over time.</p>
+
+            <h3>Common Problems to Avoid</h3>
+            <p>Despite the benefits, GBB pricing isn’t foolproof. A common mistake is failing to clearly differentiate between the tiers. If the differences aren’t meaningful, customers will default to the lowest option or feel confused and walk away. Each tier should solve a distinct problem or deliver a distinct experience.</p>
+            <p>Another issue arises when businesses offer too many options. Three is the sweet spot. Four or more can create decision fatigue and reduce conversion. Your goal is to guide customers, not overwhelm them.</p>
+            <p>One subtle trap is overpricing the premium tier without justifying the cost. A top-tier price that feels inflated can erode trust. If the extra cost doesn’t come with clear benefits—like faster delivery, priority access, or added value—customers will opt out entirely. The best premium tiers go beyond adding features; they address peace of mind, convenience, and a sense of exclusivity.</p>
+
+            <h3>How to Implement Good-Better-Best Pricing in Your Business</h3>
+            <p>Begin by mapping out your current offering. Break it into components—what’s essential, what adds value, and what could be considered premium. These building blocks will form the foundation of your tiers.</p>
+            <p>Next, look at your customer base. Are there clearly defined segments based on budget, expectations, or usage? Understanding these differences helps you tailor your tiers effectively. Use feedback, sales history, and team insights to guide your thinking.</p>
+            <p>Design three packages. Your entry-level offer should be reliable and affordable but intentionally limited. The middle option should deliver strong value and address most customer needs. Your top-tier offer should be aspirational and deliver convenience, speed, or expertise that justifies the premium.</p>
+
+            <h3>A Real-World Example: Tiered Success</h3>
+            <p>One of our clients—a commercial cleaning company—used to offer only a single hourly rate for services. This made it hard to upsell or tailor the offer to different client types. We helped them restructure their services into three distinct packages.</p>
+            <p>The entry-level tier included standard weekly cleaning. The mid-tier added deep cleaning, consumables restocking, and basic monthly reporting. The top-tier included daily cleaning, rapid-response availability, full facilities support, and customised reporting.</p>
+            <p>Within three months, the average contract value rose by 20%. Clients appreciated the clarity of options, and sales conversations became more strategic. Many clients naturally selected the top tier, seeing it as a way to ensure quality and responsiveness.</p>
+
+            <div style="background: #f8fafc; padding: 2rem; border-radius: 1rem; margin-top: 3rem;">
+                <h3 style="margin-top: 0;">3 Ways Ecco Consulting Can Help Your Business Thrive</h3>
+                <p>At Ecco Consulting, we help business owners build stronger, more valuable businesses. Whether you’re looking to improve profitability, increase operational efficiency, or prepare for a future sale, we provide expert guidance tailored to your goals.</p>
+                
+                <div style="margin-top: 1.5rem;">
+                    <strong>1. Free 90-Minute Consultation</strong>
+                    <p>Discover opportunities to optimise your business with a complimentary strategy session. Gain valuable insights into improving profitability, efficiency, and overall business value. <a href="/contact">Click Here</a> to schedule your session.</p>
+                </div>
+                
+                <div style="margin-top: 1rem;">
+                    <strong>2. Business Growth & Profitability Strategies</strong>
+                    <p>We work with you to identify key areas for revenue growth, cost control, and operational improvements, helping you run a more profitable and scalable business.</p>
+                </div>
+                
+                <div style="margin-top: 1rem;">
+                    <strong>3. Building a More Valuable & Sellable Business</strong>
+                    <p>Whether you’re considering a future sale or just want to make your business more desirable to potential acquirers, we help you enhance value and maximise your exit opportunities.</p>
+                </div>
+                
+                <p style="margin-top: 1.5rem; font-weight: bold;">Simply contact us on 03 8516 9999 or info@eccoc.com.au to learn more</p>
+            </div>
+        `
+    },
+    {
         id: 'the-business-owners-guide-to-building-a-team-that-runs-the-business-without-you',
         title: 'The Business Owner’s Guide to Building a Team That Runs the Business Without You',
         excerpt: 'The real test of a scalable, valuable company is whether it can run without the owner’s daily involvement. Learn how to build a self-sufficient team.',
