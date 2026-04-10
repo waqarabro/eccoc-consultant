@@ -1,59 +1,59 @@
 import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
 
 export async function POST(req: Request) {
     try {
         const body = await req.json();
-        const { firstName, lastName, email, message } = body;
+        const { fullName, firstName, lastName, email, message, company, phone } = body;
 
-        // Validation checking
-        if (!firstName || !lastName || !email || !message) {
-            return NextResponse.json({ error: 'All fields are required' }, { status: 400 });
+        // Determine Name
+        const name = fullName || `${firstName || ''} ${lastName || ''}`.trim() || 'Anonymous';
+
+        // Validation checking - requires at least an image and email
+        if (!email) {
+            return NextResponse.json({ error: 'Email is required' }, { status: 400 });
         }
 
-        // Create a Nodemailer transporter using SMTP
-        // In production, these should be environment variables
-        // e.g. process.env.SMTP_HOST
-        const transporter = nodemailer.createTransport({
-            host: process.env.SMTP_HOST || 'smtp.gmail.com',
-            port: parseInt(process.env.SMTP_PORT || '587'),
-            secure: process.env.SMTP_SECURE === 'true', // true for 465, false for other ports
-            auth: {
-                user: process.env.SMTP_USER,
-                pass: process.env.SMTP_PASS,
-            },
-        });
+        // Web3Forms API Key
+        // In production, this should be an environment variable: process.env.WEB3FORMS_ACCESS_KEY
+        // The user can get a free key at https://web3forms.com/
+        const accessKey = process.env.WEB3FORMS_ACCESS_KEY || "YOUR_ACCESS_KEY_HERE";
 
-        const mailOptions = {
-            from: process.env.SMTP_FROM || process.env.SMTP_USER || '"Website Contact Form" <noreply@eccoc.com.au>', // sender address
-            to: 'info@eccoc.com.au', // list of receivers as requested by user
-            subject: 'Contact Form', // Specific subject specified by user
-            text: `
-Name: ${firstName} ${lastName}
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+            },
+            body: JSON.stringify({
+                access_key: accessKey,
+                name: name,
+                email: email,
+                subject: `New Lead: ${name} from ${company || 'Website'}`,
+                message: `
+New Contact Form Submission
+
+Name: ${name}
+Company: ${company || 'N/A'}
 Email: ${email}
+Phone: ${phone || 'N/A'}
 
 Message:
-${message}
-            `,
-            html: `
-<h3>New Contact Form Submission</h3>
-<p><strong>Name:</strong> ${firstName} ${lastName}</p>
-<p><strong>Email:</strong> ${email}</p>
-<br/>
-<p><strong>Message:</strong></p>
-<p>${message.replace(/\n/g, '<br/>')}</p>
-            `,
-        };
+${message || 'No message provided (Strategy Session Booking)'}
+                `,
+                from_name: "ecco Consultants Website",
+                company: company,
+                phone: phone,
+            }),
+        });
 
-        // If credentials exist, send it
-        if (process.env.SMTP_USER && process.env.SMTP_PASS) {
-            const info = await transporter.sendMail(mailOptions);
-            console.log('Message sent: %s', info.messageId);
+        const result = await response.json();
+
+        if (result.success) {
+            return NextResponse.json({ success: true, message: 'Inquiry sent successfully' }, { status: 200 });
         } else {
-            console.warn('SMTP credentials missing. Email was not actually sent. Content:', mailOptions);
+            console.error('Web3Forms Error:', result);
+            return NextResponse.json({ error: result.message || 'Failed to send inquiry' }, { status: 500 });
         }
-
-        return NextResponse.json({ success: true, message: 'Message sent successfully' }, { status: 200 });
     } catch (error) {
         console.error('Contact form error:', error);
         return NextResponse.json({ error: 'Failed to send message' }, { status: 500 });
