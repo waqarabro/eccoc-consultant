@@ -15,8 +15,7 @@ export async function POST(req: Request) {
 
         // Web3Forms API Key
         // In production, this should be an environment variable: process.env.WEB3FORMS_ACCESS_KEY
-        // The user can get a free key at https://web3forms.com/
-        const accessKey = process.env.WEB3FORMS_ACCESS_KEY || "YOUR_ACCESS_KEY_HERE";
+        const accessKey = process.env.WEB3FORMS_ACCESS_KEY || "a0bea4b7-69c3-410d-99d2-ae4e3726f7fe";
 
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
