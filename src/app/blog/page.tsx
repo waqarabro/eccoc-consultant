@@ -33,9 +33,13 @@ function BlogContent() {
     const router = useRouter();
     const activeCategorySlug = searchParams.get('category') || 'all';
 
+    const sortedPosts = [...BLOG_POSTS].sort((a, b) => 
+        new Date(b.date).getTime() - new Date(a.date).getTime()
+    );
+
     const filteredPosts = activeCategorySlug === 'all'
-        ? BLOG_POSTS
-        : BLOG_POSTS.filter(post => post.category === CATEGORY_MAP[activeCategorySlug]);
+        ? sortedPosts
+        : sortedPosts.filter(post => post.category === CATEGORY_MAP[activeCategorySlug]);
 
     const handleCategoryChange = (slug: string) => {
         if (slug === 'all') {
