@@ -17,7 +17,7 @@ const CATEGORIES = [
     { label: 'Marketing & Sales Growth', slug: 'marketing' },
     { label: 'Operations & Efficiency', slug: 'operations' },
     { label: 'Preparing a Business for Sale & Exit Planning', slug: 'exit-planning' },
-    { label: 'People and Performance', slug: 'people' }
+    { label: 'People & Leadership', slug: 'people' }
 ];
 
 const CATEGORY_MAP: Record<string, string> = {
@@ -25,7 +25,7 @@ const CATEGORY_MAP: Record<string, string> = {
     'marketing': 'Marketing & Sales Growth',
     'operations': 'Operations & Efficiency',
     'exit-planning': 'Preparing a Business for Sale & Exit Planning',
-    'people': 'People and Performance'
+    'people': 'People & Leadership'
 };
 
 function BlogContent() {

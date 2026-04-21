@@ -712,7 +712,7 @@ export const BLOG_POSTS: BlogPost[] = [
         excerpt: 'To build a truly scalable business that delivers consistent growth, you must master the art of systemisation. Learn the steps to effectively systemise your operations.',
         date: 'March 19, 2026',
         author: 'Jeff Downs',
-        category: 'Preparing a Business for Sale & Exit Planning',
+        category: 'Operations & Efficiency',
         image: '/images/blog/How-to-Systemise-Your-Business-for-Growth-and-Scalability.png',
         content: `
             <p>Growing a business successfully isn’t just about having the right products, services, or marketing strategies. To build a truly scalable business that delivers consistent growth, you must master the art of systemisation. But what does it mean to systemise your business, and how can Australian and New Zealand companies effectively put these principles into practice?</p>

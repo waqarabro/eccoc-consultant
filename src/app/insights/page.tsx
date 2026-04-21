@@ -32,7 +32,7 @@ const insightCategories = [
     },
     {
         icon: <Users size={28} />,
-        title: "People and Performance",
+        title: "People & Leadership",
         description: "Insights focused on building capable, accountable teams and strengthening leadership effectiveness so that expectations are clear, performance improves, and the business can operate successfully without relying on the owner for every decision."
     }
 ];
@@ -128,7 +128,7 @@ export default function InsightsPage() {
                                 "Marketing & Sales Growth": "marketing",
                                 "Operations & Efficiency": "operations",
                                 "Preparing a Business for Sale & Exit Planning": "exit-planning",
-                                "People and Performance": "people"
+                                "People & Leadership": "people"
                             };
                             const slug = categorySlugs[insight.title];
 
