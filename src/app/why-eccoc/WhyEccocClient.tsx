@@ -113,7 +113,7 @@ export default function WhyEccoc() {
                         transition={{ duration: 0.6 }}
                     >
                         <p className={styles.problemText}>
-                            Most business owners don't struggle because they lack ideas. They struggle because the advice they receive doesn't always hold up in the real world <a href="https://hbr.org/1982/09/consulting-is-more-than-giving-advice" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: 'inherit', opacity: 0.8 }}>(as often researched in consulting efficacy)</a>.
+                            Most business owners don't struggle because they lack ideas. They struggle because the advice they receive doesn't always hold up in the real world.
                         </p>
                         <p className={styles.solutionText}>
                             <strong>At ecco Consultants, our perspective is different.</strong> Every advisor at ecco has built, operated, and sold businesses of their own. We've lived through the pressure, the uncertainty, the trade-offs, and the responsibility that comes with ownership. That experience shapes how we think, how we advise, and how we work with you.

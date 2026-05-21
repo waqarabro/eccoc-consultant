@@ -144,7 +144,7 @@ export const BLOG_POSTS: BlogPost[] = [
         excerpt: "The most common growth barrier in a small business isn't the market or the competition—it's the owner. Learn how to break the cycle of indispensability and build a business that runs without you.",
         date: 'April 17, 2026',
         author: 'Jeff Downs',
-        category: 'Scalable Operations',
+        category: 'Operations & Efficiency',
         image: '/images/blog/How-to-Stop-Being-the-Bottleneck-in-Your-Own-Business.png',
         content: `
             <p>The most common growth barrier in a small or medium-sized business isn't the market, the competition, or the economy. More often than not, it's the owner. And the hardest part of solving that problem is recognising it in the first place.</p>
