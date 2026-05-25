@@ -156,6 +156,40 @@ export default function ProfitCashFlowClient() {
                 </div>
             </Section>
 
+            {/* ANCHOR QUESTION SECTION */}
+            <Section className={styles.contentSection}>
+                <div className={styles.container}>
+                    <motion.div
+                        className={styles.contentBlock}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                    >
+                        <h2>What numbers should business owners actually monitor?</h2>
+                        <p>
+                            Most business owners track revenue closely. However, revenue alone rarely tells the full story of whether a business is becoming healthier, more profitable, more efficient, or more valuable over time.
+                        </p>
+                        <p>
+                            Strong businesses usually monitor a combination of indicators including profitability, labour efficiency, cash flow, debtor days, recurring revenue, customer concentration, and long-term trend direction.
+                        </p>
+                        <p>We explore these numbers in detail here:</p>
+                        <ul className={styles.styledList}>
+                            <li>
+                                <Link href="/insights/the-12-numbers-that-quietly-determine-profitability" style={{ textDecoration: 'underline', color: 'inherit' }}>
+                                    The 12 Numbers That Quietly Determine Profitability, Cash Flow and Business Value
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/insights/key-financial-metrics-every-business-owner-should-monitor" style={{ textDecoration: 'underline', color: 'inherit' }}>
+                                    Key Financial Metrics Every Business Owner Should Know
+                                </Link>
+                            </li>
+                        </ul>
+                    </motion.div>
+                </div>
+            </Section>
+
             <FinalCTA />
             <ContactForm
                 title="A conversation, not a commitment"
