@@ -229,8 +229,6 @@
 /* ========== FILTER SECTION ========== */
 .filterSection {
     padding: 3rem 0;
-    position: sticky;
-    top: 80px;
     z-index: 50;
     background: rgba(248, 250, 252, 0.8);
     backdrop-filter: blur(8px);

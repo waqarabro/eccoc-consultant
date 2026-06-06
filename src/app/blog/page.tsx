@@ -169,6 +169,11 @@ function BlogContent() {
                 </div>
             </div>
 
+            <FinalCTA />
+            <ContactForm
+                description="If you're looking for specific advice tailored to your business, let's have a conversation. Book a complimentary session below."
+            />
+
             {/* EXPLORE HEADING */}
             <div className={styles.exploreHeading}>
                 <div className={styles.container}>
@@ -254,11 +259,6 @@ function BlogContent() {
                     </motion.div>
                 </div>
             </Section>
-
-            <FinalCTA />
-            <ContactForm
-                description="If you're looking for specific advice tailored to your business, let's have a conversation. Book a complimentary session below."
-            />
         </main>
     );
 }
