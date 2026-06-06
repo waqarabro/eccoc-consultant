@@ -179,9 +179,7 @@
 }
 
 .faqLinks li::before {
-    content: '→ ';
-    color: #3B82F6;
-    font-weight: 700;
+    content: none;
 }
 
 .faqLinks li a:hover {

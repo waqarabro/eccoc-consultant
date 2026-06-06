@@ -106,11 +106,11 @@ function BlogContent() {
                         <div className={styles.faqItem}>
                             <h3 className={styles.faqQuestion}>Why isn&apos;t my marketing delivering results?</h3>
                             <p className={styles.faqAnswer}>
-                                This is one of the most common questions business owners ask. When the marketing activity is happening but the outcomes don&apos;t reflect the effort or investment, here are a couple of articles you might find helpful:
+                                This is one of the most common questions business owners ask. When the marketing activity is happening, but the outcomes don&apos;t reflect the effort or investment, here are a couple of articles you might find helpful:
                             </p>
                             <ul className={styles.faqLinks}>
-                                <li><a href="https://www.eccoc.com.au/why-your-marketing-isnt-delivering-results-and-how-to-fix-it/" target="_blank" rel="noopener noreferrer">Why Your Marketing Isn&apos;t Delivering Results (And How to Fix It)</a></li>
-                                <li><a href="https://www.eccoc.com.au/10-things-that-can-sink-your-marketing-program/" target="_blank" rel="noopener noreferrer">10 Things That Can Sink Your Marketing Program</a></li>
+                                <li><a href="https://eccoc.com.au/insights/why-your-marketing-isnt-delivering-results" target="_blank" rel="noopener noreferrer">Why Your Marketing Isn&apos;t Delivering Results (And How to Fix It)</a></li>
+                                <li><a href="https://eccoc.com.au/insights/10-things-that-can-sink-your-marketing-program" target="_blank" rel="noopener noreferrer">10 Things That Can Sink Your Marketing Program</a></li>
                             </ul>
                             <p className={styles.faqFooter}>These articles break down the common structural issues that prevent marketing from generating consistent results.</p>
                         </div>
@@ -121,7 +121,7 @@ function BlogContent() {
                                 Many businesses focus on lead volume; however, not all leads are equal. The goal is not just more leads, but better quality opportunities that convert into customers. If you want to maximise your lead generation efforts, this article is worth a read:
                             </p>
                             <ul className={styles.faqLinks}>
-                                <li><a href="https://www.eccoc.com.au/the-science-of-customer-acquisition-how-to-get-more-leads-that-convert/" target="_blank" rel="noopener noreferrer">The Science of Customer Acquisition: How to Get More Leads That Convert</a></li>
+                                <li><a href="https://eccoc.com.au/insights/the-science-of-customer-acquisition" target="_blank" rel="noopener noreferrer">The Science of Customer Acquisition: How to Get More Leads That Convert</a></li>
                             </ul>
                         </div>
 
@@ -131,17 +131,17 @@ function BlogContent() {
                                 Even with a steady flow of leads, many businesses struggle to convert them into paying customers. This is often where growth breaks down. If you are working hard to get the leads, this article may help you bring them over the line:
                             </p>
                             <ul className={styles.faqLinks}>
-                                <li><a href="https://www.eccoc.com.au/weak-sales-conversion-rates-turning-leads-into-loyal-customers/" target="_blank" rel="noopener noreferrer">Weak Sales Conversion Rates: Turning Leads into Loyal Customers</a></li>
+                                <li><a href="https://eccoc.com.au/insights/weak-sales-conversion-rates" target="_blank" rel="noopener noreferrer">Weak Sales Conversion Rates: Turning Leads into Loyal Customers</a></li>
                             </ul>
                         </div>
 
                         <div className={styles.faqItem}>
                             <h3 className={styles.faqQuestion}>Are we targeting the right market?</h3>
                             <p className={styles.faqAnswer}>
-                                Trying to appeal to everyone often results in weak positioning and poor conversion. Businesses that specialise tend to attract better-fit clients, convert more effectively, and command stronger pricing. This article helps provide that focus:
+                                Trying to appeal to everyone often results in weak positioning and poor conversion. Trying to be all things to all people just waters down your value proposition. Sometimes we need to really hone in on a couple of key things in order to break through. Businesses that specialise tend to attract better-fit clients, convert more effectively and command stronger pricing. This article helps provide that focus:
                             </p>
                             <ul className={styles.faqLinks}>
-                                <li><a href="https://www.eccoc.com.au/the-power-of-specialisation-how-succeeding-in-a-niche-market-drives-business-value/" target="_blank" rel="noopener noreferrer">The Power of Specialisation: How Succeeding in a Niche Market Drives Business Value</a></li>
+                                <li><a href="https://eccoc.com.au/insights/the-power-of-specialisation" target="_blank" rel="noopener noreferrer">The Power of Specialisation: How Succeeding in a Niche Market Drives Business Value</a></li>
                             </ul>
                         </div>
 
@@ -151,7 +151,7 @@ function BlogContent() {
                                 Growth isn&apos;t just about acquisition. If customers are leaving faster than you&apos;re replacing them, growth becomes difficult and expensive. This article will help you measure that impact on your business:
                             </p>
                             <ul className={styles.faqLinks}>
-                                <li><a href="https://www.eccoc.com.au/how-to-measure-customer-churn-and-why-its-critical-to-your-business/" target="_blank" rel="noopener noreferrer">How to Measure Customer Churn and Why It&apos;s Critical to Your Business</a></li>
+                                <li><a href="https://eccoc.com.au/insights/how-to-measure-customer-churn" target="_blank" rel="noopener noreferrer">How to Measure Customer Churn and Why It&apos;s Critical to Your Business</a></li>
                             </ul>
                         </div>
 
